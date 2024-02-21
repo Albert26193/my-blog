@@ -10,7 +10,7 @@
       class="vitepress"
       target="_blank"
       href="//vitepress.vuejs.org/"
-      >VitePress - 1.0.0-rc.32</a
+      >VitePress</a
     >
     Theme by
     <a

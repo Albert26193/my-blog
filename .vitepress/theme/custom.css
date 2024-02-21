@@ -198,3 +198,31 @@ h3 {
   border-radius: 8px;
   /* color: var(--vp-c-text-1); */
 }
+
+/************** image ************/
+
+.main img {
+  /* max-width: 800px; */
+  object-fit: contain;
+  margin: 6px auto;
+}
+
+.main img[alt*='|xs'] {
+  width: 300px;
+}
+
+.main img[alt*='|s'] {
+  width: 400px;
+}
+
+.main img[alt*='|m'] {
+  width: 500px;
+}
+
+.main img[alt*='|l'] {
+  width: 600px;
+}
+
+.main img[alt*='|xl'] {
+  width: 800px;
+}

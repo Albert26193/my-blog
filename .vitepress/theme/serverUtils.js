@@ -4,7 +4,7 @@ import fs from 'fs-extra'
 import { resolve } from 'path'
 
 async function getPosts(pageSize) {
-    let paths = await globby(['posts/**.md'])
+    let paths = await globby(['posts/**/**.md'])
 
     //生成分页页面markdown
     await generatePaginationPages(paths.length, pageSize)

@@ -4,7 +4,7 @@
     :key="index"
     class="post-list"
   >
-    <div class="post-header">
+    <div class="post-header mt-2">
       <div class="post-title">
         <a :href="withBase(article.regularPath)"> {{ article.frontMatter.title }}</a>
       </div>
@@ -68,7 +68,7 @@ const props = defineProps({
 
 <style scoped>
 .post-list {
-  border-bottom: 1px dashed var(--vp-c-divider-light);
+  border-bottom: 1px dashed rgba(100, 100, 100, 0.8);
   padding: 14px 0 14px 0;
 }
 .post-header {
