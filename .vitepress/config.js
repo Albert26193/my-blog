@@ -5,7 +5,7 @@ import { getPosts } from './theme/serverUtils'
 const pageSize = 10
 
 export default defineConfig({
-    title: 'vitepress',
+    title: 'Albert Blog',
     base: '/',
     cacheDir: './node_modules/vitepress_cache',
     description: 'vitepress,blog,blog-theme',
@@ -30,7 +30,7 @@ export default defineConfig({
             provider: 'local',
         },
         //outline:[2,3],
-        outlineTitle: '文章摘要',
+        outlineTitle: 'Table of Contents',
         socialLinks: [{ icon: 'github', link: 'https://github.com/airene/vitepress-blog-pure' }]
     },
     srcExclude: ['README.md'], // exclude the README.md , needn't to compiler
@@ -39,9 +39,4 @@ export default defineConfig({
         //build: { minify: false }
         server: { port: 5000 }
     }
-    /*
-      optimizeDeps: {
-          keepNames: true
-      }
-      */
 })

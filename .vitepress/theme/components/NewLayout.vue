@@ -6,10 +6,10 @@
         class="post-info"
         v-if="!$frontmatter.page"
       >
-        {{ $frontmatter.date?.substring(0, 10) }} &nbsp;&nbsp;
+        {{ $frontmatter.date?.substring(0, 10) }}
         <span
           v-for="item in $frontmatter.tags"
-          class="mt-2"
+          class="mt-2 hover:.dark:bg-slate-100 hover:bg-blue-200 hover:.dark:text-indigo-500"
         >
           <a :href="withBase(`/pages/tags.html?tag=${item}`)"> {{ item }}</a>
         </span>

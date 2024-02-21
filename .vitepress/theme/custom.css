@@ -4,16 +4,23 @@
   --vp-c-brand-lighter: var(--vp-c-brand);
   --vp-c-brand-dark: var(--vp-c-brand);
   --vp-c-brand-darker: var(--vp-c-brand);
-
   --vp-font-family-base: 'PingFang SC', 'Microsoft Yahei', sans-serif;
 
   /* pure theme color */
   --li-dot-color: var(--vp-c-brand);
   --date-color: var(--vp-c-text-2);
   --date-font-family: Georgia, sans-serif;
+  /* my theme color */
+  --tag-info-color: rgba(37, 99, 235, 0.3);
+  --tag-count-color: rgba(37, 49, 235, 0.9);
+  --tag-hover-color: rgba(37, 49, 225, 0.8);
 }
+
 .dark {
   --vp-c-brand: #3b82f6;
+  --tag-info-color: rgba(59, 130, 246, 0.3);
+  --tag-count-color: rgba(19, 190, 256, 0.9);
+  --tag-hover-color: rgba(37, 149, 235, 0.9);
 }
 
 /* theme reset start */
@@ -35,7 +42,7 @@
   font-size: 1.5rem !important;
   letter-spacing: 1px;
   font-weight: 600 !important;
-  text-transform: uppercase;
+  /* text-transform: uppercase; */
   font-family: var(--date-font-family);
 }
 
@@ -175,14 +182,19 @@ h3 {
 }
 
 .post-info {
-  font-size: 12px;
+  font-size: 13.6px;
 }
+
 .post-info span {
-  display: inline-block;
-  padding: 0 8px;
-  background-color: var(--vp-c-bg-alt);
-  margin-right: 10px;
+  display: inline-flex;
+  font-weight: 700;
+  align-items: center;
+  justify-content: center;
+  padding: 2px 12px;
+  text-align: center;
+  background-color: var(--tag-info-color);
+  margin: 2px 10px;
   transition: 0.4s;
-  border-radius: 2px;
-  color: var(--vp-c-text-1);
+  border-radius: 8px;
+  /* color: var(--vp-c-text-1); */
 }

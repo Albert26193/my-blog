@@ -2,7 +2,7 @@
   <div
     v-for="(article, index) in posts"
     :key="index"
-    class="post-list indent-5"
+    class="post-list"
   >
     <div class="post-header">
       <div class="post-title">
@@ -10,14 +10,17 @@
       </div>
     </div>
     <p
-      class="describe"
+      class="describe indent-8"
       v-html="article.frontMatter.description"
     ></p>
     <div class="post-info">
       {{ article.frontMatter.date }}
-      <span v-for="item in article.frontMatter.tags"
-        ><a :href="withBase(`/pages/tags.html?tag=${item}`)"> {{ item }}</a></span
+      <span
+        v-for="item in article.frontMatter.tags"
+        class="hover:.dark:bg-slate-50 hover:bg-blue-200 tag"
       >
+        <a :href="withBase(`/pages/tags.html?tag=${item}`)"> {{ item }}</a>
+      </span>
     </div>
   </div>
 
