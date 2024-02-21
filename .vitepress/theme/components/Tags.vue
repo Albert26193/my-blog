@@ -3,20 +3,20 @@
     <span
       @click="toggleTag(String(key))"
       v-for="(_, key) in data"
-      class="tag hover:.dark:bg-slate-100 hover:bg-blue-200"
+      class="tag hover:.dark:bg-blue-500 hover:bg-blue-200"
     >
       {{ key }}
       <span class="count">{{ data[key].length }}</span>
     </span>
   </div>
-  <div class="tag-header">{{ selectTag }}</div>
+  <div class="tag-header mt-6 mb-2 mr-1">{{ selectTag }}</div>
   <a
     :href="withBase(article.regularPath)"
     v-for="(article, index) in data[selectTag]"
     :key="index"
     class="posts"
   >
-    <div class="post-container">
+    <div class="post-container text-slate-200 font-bold mt-1">
       <div class="post-dot"></div>
       {{ article.frontMatter.title }}
     </div>
@@ -53,7 +53,7 @@ const toggleTag = (tag: string) => {
   color: var(--tag-count-color);
 }
 
-.tags :hover {
+.tags .count:hover {
   color: var(--tag-hover-color);
 }
 
@@ -72,7 +72,6 @@ const toggleTag = (tag: string) => {
 .tag-header {
   font-size: 1.5rem;
   font-weight: 500;
-  margin: 1rem 0;
   text-align: left;
 }
 

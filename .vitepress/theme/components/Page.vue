@@ -17,7 +17,7 @@
       {{ article.frontMatter.date }}
       <span
         v-for="item in article.frontMatter.tags"
-        class="hover:.dark:bg-slate-50 hover:bg-blue-200 tag"
+        class="hover:.dark:bg-blue-500 hover:.dark:text-slate-800 hover:bg-blue-200 tag"
       >
         <a :href="withBase(`/pages/tags.html?tag=${item}`)"> {{ item }}</a>
       </span>

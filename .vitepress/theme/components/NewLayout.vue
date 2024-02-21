@@ -9,7 +9,7 @@
         {{ $frontmatter.date?.substring(0, 10) }}
         <span
           v-for="item in $frontmatter.tags"
-          class="mt-2 hover:.dark:bg-slate-100 hover:bg-blue-200 hover:.dark:text-indigo-500"
+          class="mt-2 hover:.dark:bg-blue-500 hover:bg-blue-200 hover:.dark:text-slate-100"
         >
           <a :href="withBase(`/pages/tags.html?tag=${item}`)"> {{ item }}</a>
         </span>
