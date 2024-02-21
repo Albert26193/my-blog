@@ -14,6 +14,9 @@
   --tag-info-color: rgba(37, 99, 235, 0.3);
   --tag-count-color: rgba(37, 49, 235, 0.9);
   --tag-hover-color: rgba(37, 49, 225, 0.8);
+  --c-text-code: rgba(252, 179, 54, 0.9);
+  --c-text-strong: rgb(248, 93, 93);
+  --c-text-em: rgba(105, 253, 255, 0.8);
 }
 
 .dark {
@@ -208,7 +211,7 @@ h3 {
 /************** image ************/
 
 .main img {
-  /* max-width: 800px; */
+  max-width: 600px;
   object-fit: contain;
   margin: 6px auto;
 }
@@ -231,4 +234,20 @@ h3 {
 
 .main img[alt*='|xl'] {
   width: 800px;
+}
+
+/* custom */
+.vp-doc strong {
+  color: var(--c-text-strong);
+  margin: 0 2px;
+}
+
+.vp-doc em {
+  color: var(--c-text-em);
+  margin: 0 2px;
+}
+
+.vp-doc :not(pre, div) > code {
+  color: var(--c-text-code);
+  margin: 0 2px;
 }
