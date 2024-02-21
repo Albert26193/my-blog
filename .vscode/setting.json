@@ -1,0 +1,5 @@
+{
+  "remote.SSH.workspaceFolder": {
+    "memoryLimit": "2048m"
+  }
+}
