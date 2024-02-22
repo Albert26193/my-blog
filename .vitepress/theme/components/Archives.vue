@@ -9,7 +9,7 @@
       :key="index"
       class="posts"
     >
-      <div class="post-container .dark:text-slate-100 text-slate-800">
+      <div class="post-container .dark:text-slate-100 text-slate-800 font-bold">
         <div class="post-dot"></div>
         {{ article.frontMatter.title }}
       </div>

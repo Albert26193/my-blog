@@ -5,6 +5,6 @@ description: About me test
 aside: false
 ---
 
-# about me
+# about this site
 
-coming soon...
+本站点基于 `vitepress` 搭建，用以记录一些学习笔记和技术分享。
