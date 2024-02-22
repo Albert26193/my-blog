@@ -3,13 +3,14 @@ author: Albert
 date: 2024-02-22
 date created: 2023-09-19
 date updated: 2023-09-19 14:54
-description: info
+
 tags:
   - JS
   - interview
 title: JS-如何判断对象为空
 ---
-#JS  #interview 
+
+#JS #interview
 
 # JS-如何判断对象为空
 
@@ -17,11 +18,11 @@ title: JS-如何判断对象为空
 
 ```js
 function isEmpty(obj) {
-    return Reflect.ownKeys(obj).length === 0;
+  return Reflect.ownKeys(obj).length === 0
 }
 
-console.log(isEmpty({})); // true
-console.log(isEmpty({ a: 1 })); // false
+console.log(isEmpty({})) // true
+console.log(isEmpty({ a: 1 })) // false
 ```
 
 - `Object.keys(obj)` 返回对象所有**可枚举的自有属性**。如果有**非枚举属性或者符号属性，那么将不会被考虑**。

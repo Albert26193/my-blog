@@ -3,7 +3,7 @@ author: Albert
 date: 2024-02-22
 date created: 2023-06-16
 date updated: 2023-07-26 14:35
-description: info
+
 tags:
   - interview
   - JS
@@ -14,10 +14,11 @@ title: JS-数据描述符和访问器描述符
 # JS-数据描述符和访问器描述符
 
 > [!MDN]
+>
 > - 对象中存在的属性描述符有两种主要类型：**数据描述符** 和 **访问器描述符**。数据描述符是一个具有可写或不可写值的属性。访问器描述符是由 getter/setter 函数对描述的属性。描述符只能是这两种类型之一，不能同时为两者。
 > - Link: https://developer.mozilla.org/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/Object/defineProperty
 
-***为什么需要设计访问器属性？访问器属性的作用似乎完全可以通过方法去代替？**
+**\*为什么需要设计访问器属性？访问器属性的作用似乎完全可以通过方法去代替？**
 
 ## 1. 数据描述符
 
@@ -30,14 +31,17 @@ title: JS-数据描述符和访问器描述符
 
 ```js
 if (1) {
-  const obj = Object.defineProperties({}, {
-    someProperty1: {
-      value: 10,
-      writable: true,
-      enumerable: true,
-      configurable: false
+  const obj = Object.defineProperties(
+    {},
+    {
+      someProperty1: {
+        value: 10,
+        writable: true,
+        enumerable: true,
+        configurable: false
+      }
     }
-  })
+  )
 
   console.log(obj, Object.getOwnPropertyDescriptors(obj))
 }
@@ -45,8 +49,7 @@ if (1) {
 
 ### 1.2 `writable` 属性
 
-> [!MDN]
-> `writable`: 如果与属性相关联的值可以使用赋值运算符更改，则为 `true`。默认值为 `false`。
+> [!MDN] > `writable`: 如果与属性相关联的值可以使用赋值运算符更改，则为 `true`。默认值为 `false`。
 
 - 这个属性是 **数据描述符** 特有的，这一点很好理解，只有数据才有 `writable` 的意义。
 
@@ -67,23 +70,23 @@ if (1) {
     name: 'Alice',
     age: 55
   }
-  
+
   Object.defineProperty(obj2, 'phone', {
-    value: 42,
+    value: 42
     // enumerable: true
   })
 
   Object.defineProperty(obj2, 'age', {
-    get: function() {
+    get: function () {
       console.log('get it')
       return 55
     },
 
-    set: function(newVal) {
+    set: function (newVal) {
       console.log('set it', newVal)
     }
   })
-  
+
   // console.log(Object.getOwnPropertyDescriptors(obj2))
   console.log(obj2)
   // console.log(obj2.age)
@@ -92,31 +95,31 @@ if (1) {
 ```
 
 ---
+
 - 再次修改 `get` 和 `set` 都会出错，因为二者的属性是一个函数
 
 ```js
-const obj = {};
+const obj = {}
 
 Object.defineProperty(obj, 'name', {
   value: 'yancey',
-  configurable: false,
-});
+  configurable: false
+})
 
 // Uncaught TypeError: Cannot redefine property: name
-Object.defineProperty(obj, 'name', { get: function() {} });
+Object.defineProperty(obj, 'name', { get: function () {} })
 
 // Uncaught TypeError: Cannot redefine property: name
-Object.defineProperty(obj, 'name', { set: function() {} });
-
+Object.defineProperty(obj, 'name', { set: function () {} })
 ```
 
 ## 3. 数据描述符和 访问器描述符的公共属性
 
 - `configurable` 属性：
 
-> [!MDN]
-> `configurable`
-当设置为 `false` 时，
+> [!MDN] > `configurable`
+> 当设置为 `false` 时，
+>
 > - 该属性的类型 **不能在数据属性和访问器属性之间更改**，且
 > - 该属性不可被删除，且
 > - 其描述符的其他属性也不能被更改（但是，如果它是一个可写的数据描述符，则 `value` 可以被更改，`writable` 可以更改为 `false`）。
@@ -124,23 +127,23 @@ Object.defineProperty(obj, 'name', { set: function() {} });
 ```js
 // configurable and writable
 if (1) {
-  const obj3 = {name: 'Eric'}
+  const obj3 = { name: 'Eric' }
   Object.defineProperty(obj3, 'age', {
     value: 20,
     writable: true,
     enumerable: true,
     configurable: false
   })
-  
+
   // if configurable: false but writable: true
   // you can still change the value
   obj3.age = 800
   console.log(obj3)
-  
+
   /******************************************/
   // defineProperty can change the existing property, not redefine it
   //console.log(Object.getOwnPropertyDescriptor(obj3, 'age'))
-  
+
   // if configurable is false, you can still change 'writable' from 'true' to 'false'
   // but can not from 'false' to 'true'
   Object.defineProperty(obj3, 'age', {
@@ -149,7 +152,7 @@ if (1) {
     configurable: false
   })
   console.log(obj3)
-  
+
   // error: can not change writable from 'false' to 'true', if 'configurable' is 'false'
   /*
   Object.defineProperty(obj3, 'age', {
@@ -158,10 +161,10 @@ if (1) {
   })
   */
 }
-
 ```
 
 - 如果 `configurable` 是 `false` ，那么 `writable` 只能从 `true` 变成 `false` ，换言之，**`configurable` 是 `false` 的情况下，只允许变得更加严格，不允许变得宽松**
+
 ---
 
 - `enumerable` 属性
