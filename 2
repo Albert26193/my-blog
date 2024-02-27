@@ -14,10 +14,9 @@
       class="describe indent-8"
       v-html="article.frontMatter.description"
     ></p>
-    <div
-      v-else
-      class="mt-4"
-    ></div>
+    <div v-else class="mt-4">
+
+    </div>
     <div class="post-info">
       {{ article.frontMatter.date }}
       <span
@@ -153,3 +152,4 @@ const props = defineProps({
   }
 }
 </style>
+
