@@ -4,7 +4,13 @@
       class="vitepress"
       :href="website"
       >{{ webTitle }}</a
-    ><br />
+    >
+    <a
+      class="ml-4"
+      href="https://beian.miit.gov.cn/"
+      >沪ICP备2024051666号</a
+    >
+    <br />
     Powered by
     <a
       class="vitepress"
