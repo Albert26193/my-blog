@@ -7,6 +7,7 @@ description: 运维过程当中的一些实践，作为备忘录使用。
 link: https://www.notion.so/CS-Linux-6b432a1b3
 notionID: 6b432a1b-3569-4043-a3ff-b56ce5fd9916
 tags:
+  - Blog
   - Linux
   - 运维备忘录
 title: Linux-服务器重装备忘录

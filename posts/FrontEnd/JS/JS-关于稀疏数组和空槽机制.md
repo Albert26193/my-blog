@@ -5,6 +5,7 @@ date created: 2023-07-10
 date updated: 2023-07-10 16:00
 description: JS基础知识
 tags:
+  - Blog
   - JS
   - interview
   - front-end

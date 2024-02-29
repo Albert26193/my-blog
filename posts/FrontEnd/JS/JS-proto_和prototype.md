@@ -6,6 +6,7 @@ date created: 2023-05-09
 date updated: 2023-10-10 14:51
 
 tags:
+  - Blog
   - JS
   - front-end
 title: JS-proto_和prototype

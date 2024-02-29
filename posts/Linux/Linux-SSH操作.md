@@ -6,6 +6,7 @@ date created: 2023-05-09
 date updated: 2023-08-02 19:31
 description: Linux常用命令
 tags:
+  - Blog
   - Linux
   - Command
 title: Linux-SSH操作
@@ -15,7 +16,7 @@ title: Linux-SSH操作
 
 ## 1. 什么是SSH？
 
-Secure Shell 是一个建立在应用层之上的加密协议。SSH提供了一个安全的隧道，可以在不安全的网络环境里面传输信息。**如果有多个服务器需要连接，通过SSH就可以使用本地终端登录到远程服务器当中** 。SSH也支持文件的传输。 
+Secure Shell 是一个建立在应用层之上的加密协议。SSH提供了一个安全的隧道，可以在不安全的网络环境里面传输信息。**如果有多个服务器需要连接，通过SSH就可以使用本地终端登录到远程服务器当中** 。SSH也支持文件的传输。
 
 ## 2. SSH登录
 
@@ -29,7 +30,7 @@ Secure Shell 是一个建立在应用层之上的加密协议。SSH提供了一�
 
 - `ssh user@host`，譬如`ssh albert@192.168.1.1`接公网IP即可，`user`是用户名，`host`是域名或者IP。
 - 第一次连接会出现`xxxx, Are you sure you want to continue connecting (yes/no/[fingerprint])?`选择`yes`之后，相关信息会存在`~/.ssh/known_hosts`
-- 如何指定端口?`ssh user@host -p 22`，指定客户端端口号为`22`。 
+- 如何指定端口?`ssh user@host -p 22`，指定客户端端口号为`22`。
 
 ## 2.2 配置config
 
@@ -50,9 +51,9 @@ Host myserver2
 
 - 创建密钥，客户端终端输入：`ssh-keygen`
 - 创建之后， 客户端的 `~/.ssh/`目录下，将会出现2个文件，分别是 `~/.ssh/id_rsa`和`~/.ssh/id_rsa.pub`，前者是私钥，后者是公钥。
-- *把公钥放到服务端*，即服务端的`~/.ssh/authorized_keys`文件和客户端的`~/.ssh/id_rsa.pub`一致。就可以不用输入密码登录.
+- _把公钥放到服务端_，即服务端的`~/.ssh/authorized_keys`文件和客户端的`~/.ssh/id_rsa.pub`一致。就可以不用输入密码登录.
 - 必须是 **authorized_keys** 命名，才能被系统识别到
-- 上面的操作可以用一个命令生成：`ssh-copy-id myserver` 
+- 上面的操作可以用一个命令生成：`ssh-copy-id myserver`
 
 ## 3. SSH传输文件
 
@@ -64,7 +65,7 @@ Host myserver2
 - 指定服务器端口号：`scp -P 22 1.txt server:/home/`
 - 连接成功之后，在本地，可以执行`ssh name@server command`，比如`ssh name@server ls -a`。
 
-***
+---
 
 - 一般而言，我自己喜欢`ssh name@myserver command`这样的方式。比直接切到远程服务器上要方便。但是需要注意一个点，就是`ssh name@myserver ~/xxx`当中的`~`，本地的shell会将其解析成本地的目录。因此，想访问远程服务器`myserver`上`/home/myname/1.txt`文件，写成`ssh name@myserver ~/1.txt`会找不到目标文件，正确的写法是`ssh name@myserver ./1.txt`。
 
@@ -122,6 +123,7 @@ tail -f /var/log/auth.log
 ---
 
 > [!tip]
+>
 > - 具体是怎么防范中间人攻击的？
 > - 比如某个坏蛋服务器劫持了本地向目标服务器的请求
 > - 然后这个坏蛋服务器就获得了本地和目标服务器通信的私钥

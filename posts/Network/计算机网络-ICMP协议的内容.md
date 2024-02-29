@@ -1,22 +1,18 @@
 ---
 author: Albert
 category: CS-基础
-date: 2024-02-22
+date: 2024-02-29
 date created: 2023-05-09
-date updated: 2024-02-07 00:11
-description: 计算机网络常识
+date updated: 2022-12-07 23:10
 tags:
   - Blog
   - network
-  - interview
-title: 计算机网络-ping背后的原理
+title: 计算机网络-ICMP协议的内容
+url: https://www.yuque.com/albert-tdjyy/bp5vz7/gss5d8
 ---
 
-# 计算机网络-ping背后的原理
 
-- ping工作在网络层上，直接调用传输层的ICMP协议。
-
-> [!citation] > [深入理解ICMP协议 - 知乎](https://zhuanlan.zhihu.com/p/369623317)
+# 计算机网络-ICMP协议的内容
 
 ## 1. `ICMP` 协议的内容
 
@@ -53,12 +49,3 @@ title: 计算机网络-ping背后的原理
 - 对于**差错控制报文**而言，也分为多种类型，每种类型对应着一个代码号。
 
 ![image.png|400](https://img-20221128.oss-cn-shanghai.aliyuncs.com/img-2023-05/20240207000148.png)
-
-## 3. `ping` 的原理
-
-- 如果 `A` 对 `B` 进行 `ping` 操作：
-  - `A` 构造一个 `ICMP` **回送请求消息**（类型号为 `8`，即**我需要确认你的状态，如果你是健康的，请回复我一个 `0` 类型号的报文**），同时，这个 `ICMP` 数据包当中还需要包含*序号*，因为需要区分连续 `ping` 的时候发出的多个数据包。还包括其他很多字段，_消息类型_ 和 _序号_ 是最核心的两个。
-  - `A` 所构造的 `ICMP` 报文，会被先后封装 `IP` 头，`MAC` 头，**就像一个普通的 `IP` 数据包一样** 层层封装，然后经过 `IP/ARP` 协议的解析，被发送给目标 `B`。
-  - `B` 收到报文后，如果正常，就构造一个 **回送应答消息**，类型号 `0`，即**我已经收到了的消息，我现在是健康的，通知一下你**。
-
-![image.png](https://img-20221128.oss-cn-shanghai.aliyuncs.com/img-2023-05/20240207001034.png)

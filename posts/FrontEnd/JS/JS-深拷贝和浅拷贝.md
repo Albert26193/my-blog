@@ -5,6 +5,7 @@ date created: 2023-05-09
 date updated: 2023-07-24 13:47
 
 tags:
+  - Blog
   - JS
   - interview
   - front-end

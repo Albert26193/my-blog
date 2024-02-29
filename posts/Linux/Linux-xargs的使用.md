@@ -4,6 +4,7 @@ date: 2024-02-22
 date created: 2023-05-09
 date updated: 2023-08-12 01:10
 tags:
+  - Blog
   - Linux
   - Command
 title: Linux-xargs的使用

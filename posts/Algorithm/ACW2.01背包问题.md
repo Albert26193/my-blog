@@ -5,6 +5,7 @@ date created: 2023-11-28
 date updated: 2023-11-28 21:08
 description: 01背包问题，经典的动态规划问题，此题目的难点在于如何进行一维空间复杂度的优化。
 tags:
+  - Blog
   - acw
   - algorithm
   - 背包问题
@@ -85,7 +86,6 @@ import (
 	"os"
 )
 
-// TAGS: dp
 
 // 01 package
 // f[i][j] ==> from [0, ... i-1] choose items, volume is j, max worth is f[i][j]

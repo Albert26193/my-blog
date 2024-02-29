@@ -6,6 +6,7 @@ date created: 2023-05-09
 date updated: 2022-12-11 16:50
 link: https://www.notion.so/Linux-Tmux-82488e3eb82f47cd990cdec78c14bac1
 tags:
+  - Blog
   - Linux
   - 工具
 title: Linux-Tmux操作备忘录
@@ -14,9 +15,7 @@ notionID: 82488e3e-b82f-47cd-990c-dec78c14bac1
 
 # Linux-Tmux操作备忘录
 
-> [!info]
-> <https://www.ruanyifeng.com/blog/2019/10/tmux.html>
-> <https://yangfangs.github.io/wiki/2020-4-12-tmux-shortcut-key/>
+> [!info] > <https://www.ruanyifeng.com/blog/2019/10/tmux.html> > <https://yangfangs.github.io/wiki/2020-4-12-tmux-shortcut-key/>
 
 ## 1. tmux概念
 
@@ -28,7 +27,7 @@ notionID: 82488e3e-b82f-47cd-990c-dec78c14bac1
   - 允许每个会话有多个连接窗口，多人同时共享会话
   - 支持窗口的拆分和组合
 
-***
+---
 
 - 一个简单的例子，如果使用`alacritty`运行一个死循环打印的`cpp`程序。终端窗口关闭，则程序终止。实例如下
 
@@ -40,7 +39,7 @@ notionID: 82488e3e-b82f-47cd-990c-dec78c14bac1
 
 ![tmux.gif](http://img-blog-01.oss-cn-shanghai.aliyuncs.com/img/2022-11-27-193750.gif)
 
-***
+---
 
 ## 2. tmux常见操作
 
@@ -118,7 +117,7 @@ $ tmux rename-session -t 0 <new-name>
 
 ![image.png](http://img-blog-01.oss-cn-shanghai.aliyuncs.com/img/2022-11-27-193752.png)
 
-***
+---
 
 ### 2.7 划分窗格
 
@@ -179,7 +178,7 @@ $ tmux swap-pane -D
 - Ctrl+b Ctrl+$arrow key$：按箭头方向调整窗格大小。
 - Ctrl+b q：显示窗格编号。
 
--- 
+--
 
 ### 2.11 新建窗口
 
