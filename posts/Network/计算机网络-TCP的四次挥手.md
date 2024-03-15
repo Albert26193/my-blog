@@ -15,11 +15,14 @@ title: 计算机网络-TCP的四次挥手
 
 ## 1. 四次挥手的过程
 
-![image.png](https://img-20221128.oss-cn-shanghai.aliyuncs.com/img-2022-11/20230421155336.png)
+![image.png|475](https://img-20221128.oss-cn-shanghai.aliyuncs.com/img-2023-05/20240310203607.png)
+
+
+![image.png|500](https://img-20221128.oss-cn-shanghai.aliyuncs.com/img-2022-11/20230421155336.png)
 
 ## 2. 为什么FIN消息自己需要独立占据一个seq号
 
-![image.png](https://img-20221128.oss-cn-shanghai.aliyuncs.com/img-2022-11/20230423154454.png)
+![image.png|500](https://img-20221128.oss-cn-shanghai.aliyuncs.com/img-2022-11/20230423154454.png)
 
 - 如果不消耗一个独立的`seq`号，那么，对于之后接受到的`ack`号，就无从判断：**到底是对方收到了之前自己发出的载荷数据，还是FIN消息**
 

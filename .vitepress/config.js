@@ -109,7 +109,7 @@ export default defineConfig({
             },
         },
     },
-    title: 'Albert Blog',
+    title: "Albert's Blog",
     base: '/',
     cacheDir: './node_modules/vitepress_cache',
     description: 'vitepress,blog,blog-theme',
@@ -124,8 +124,8 @@ export default defineConfig({
             issueTerm: 'pathname'
         },
         nav: [
-            { text: 'Home', link: '/' },
-            { text: 'Archives', link: '/pages/archives' },
+            { text: 'Blogs', link: '/pages/blogs' },
+            { text: 'Timeline', link: '/pages/archives' },
             { text: 'Tags', link: '/pages/tags' },
             { text: 'About', link: '/pages/about' }
             // { text: 'Airene', link: 'http://airene.net' }  -- External link test

@@ -3,7 +3,7 @@
     <span
       @click="toggleTag(String(key))"
       v-for="(_, key) in data"
-      class="tag hover:.dark:bg-blue-500 hover:bg-blue-200"
+      class="tag hover:.dark:bg-blue-500 hover:bg-blue-200 rounded-full hover:font-extrabold"
     >
       {{ key }}
       <span class="count">{{ data[key].length }}</span>
@@ -45,6 +45,7 @@ const toggleTag = (tag: string) => {
   flex-wrap: wrap;
   font-weight: 600;
 }
+
 .tags .count {
   margin-left: 4px;
   font-weight: 700;
@@ -59,16 +60,27 @@ const toggleTag = (tag: string) => {
 
 .tag {
   display: inline-block;
-  padding: 4px 16px;
+  padding: 3px 16px;
   margin: 6px 8px;
   font-size: 0.875rem;
   line-height: 25px;
-  background-color: var(--tag-info-color);
+  /*background-color: var(--tag-info-color);*/
+  border: 1px solid var(--tag-border-color);
   transition: 0.4s;
-  border-radius: 12px;
   color: var(--vp-c-text-1);
   cursor: pointer;
 }
+
+.tag:hover {
+  border: 1px solid var(--tag-info-color);
+  font-weight: 800;
+}
+
+.tag:hover .count {
+  color: var(--tag-hover-color);
+  transition: 0.4s;
+}
+
 .tag-header {
   font-size: 1.5rem;
   font-weight: 500;
