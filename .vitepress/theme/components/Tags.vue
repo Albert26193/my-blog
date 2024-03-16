@@ -2,8 +2,10 @@
   <div class="tags">
     <span
       @click="toggleTag(String(key))"
-      v-for="(_, key) in data"
+      v-for="(_, key, index) in data"
+      :key="`tag-${index}`"
       class="tag hover:.dark:bg-blue-500 hover:bg-blue-200 rounded-full hover:font-extrabold"
+      :class="{ active: selectTag == String(key) }"
     >
       {{ key }}
       <span class="count">{{ data[key].length }}</span>
@@ -25,14 +27,16 @@
 </template>
 
 <script lang="ts" setup>
-import { computed, ref } from 'vue'
+import { computed, onMounted, ref } from 'vue'
 import { useData, withBase } from 'vitepress'
 import { initTags } from '../functions'
-let url = location.href.split('?')[1]
-let params = new URLSearchParams(url)
+
+const url = location.href.split('?')[1]
+const params = new URLSearchParams(url)
 const { theme } = useData()
 const data = computed(() => initTags(theme.value.posts))
-let selectTag = ref(params.get('tag') ? params.get('tag') : '')
+
+const selectTag = ref(params.get('tag') ? params.get('tag') : '')
 const toggleTag = (tag: string) => {
   selectTag.value = tag
 }
@@ -47,7 +51,7 @@ const toggleTag = (tag: string) => {
 }
 
 .tags .count {
-  margin-left: 4px;
+  margin-left: 2px;
   font-weight: 700;
   font-size: 1rem;
   margin-left: 8px;
@@ -61,14 +65,26 @@ const toggleTag = (tag: string) => {
 .tag {
   display: inline-block;
   padding: 2px 14px;
-  margin: 6px 8px;
+  margin: 4px 6px;
   font-size: 0.875rem;
   line-height: 25px;
-  /*background-color: var(--tag-info-color);*/
   border: 1px solid var(--tag-border-color);
   transition: 0.4s;
   color: var(--vp-c-text-1);
   cursor: pointer;
+  box-sizing: border-box;
+}
+
+.tags .tag.active {
+  border: 1px solid var(--vp-c-brand);
+  color: var(--vp-c-brand);
+  font-weight: 900;
+  box-sizing: border-box;
+}
+
+.tags .tag.active .count {
+  color: var(--vp-c-brand);
+  transition: 0.4s;
 }
 
 .tag:hover {

@@ -109,7 +109,7 @@ export default defineConfig({
             },
         },
     },
-    title: "Albert's Blog",
+    title: "🚀️Albert's Blog",
     base: '/',
     cacheDir: './node_modules/vitepress_cache',
     description: 'vitepress,blog,blog-theme',
@@ -124,7 +124,7 @@ export default defineConfig({
             issueTerm: 'pathname'
         },
         nav: [
-            { text: 'Blogs', link: '/pages/blogs' },
+            { text: 'Blogs', link: '/pages/blogs/index' },
             { text: 'Timeline', link: '/pages/archives' },
             { text: 'Tags', link: '/pages/tags' },
             { text: 'About', link: '/pages/about' }
@@ -133,7 +133,7 @@ export default defineConfig({
         search: {
             provider: 'local',
         },
-        outline:[2,3],
+        outline: [2, 3],
         outlineTitle: 'Table of Contents',
         socialLinks: [{ icon: 'github', link: 'https://github.com/Albert26193' }]
     },

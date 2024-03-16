@@ -27,7 +27,7 @@ async function getPosts(pageSize) {
 async function generatePaginationPages(total, pageSize) {
     //  pagesNum
     let pagesNum = total % pageSize === 0 ? total / pageSize : parseInt(total / pageSize) + 1
-    const paths = resolve('./')
+    const paths = resolve('./pages/blogs')
     if (total > 0) {
         for (let i = 1; i < pagesNum + 1; i++) {
             const page = `
@@ -37,7 +37,7 @@ title: ${i === 1 ? 'home' : 'page_' + i}
 aside: false
 ---
 <script setup>
-import Page from "./.vitepress/theme/components/Page.vue";
+import Page from "../../.vitepress/theme/components/Page.vue";
 import { useData } from "vitepress";
 const { theme } = useData();
 const posts = theme.value.posts.slice(${pageSize * (i - 1)},${pageSize * i})

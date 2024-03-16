@@ -11,9 +11,9 @@
   --tag-count-color: rgba(37, 49, 235, 0.9);
   --tag-hover-color: rgba(37, 49, 225, 0.8);
   --tag-border-color: rgba(56, 56, 56, 0.8);
-  --c-text-code: rgb(183, 77, 1);
-  --c-text-strong: rgb(248, 93, 93);
-  --c-text-em: rgb(0, 198, 212);
+  --c-text-code: rgb(0, 110, 255);
+  --c-text-strong: rgb(248, 42, 42);
+  --c-text-em: rgb(0, 110, 150);
 }
 
 .dark {
@@ -22,9 +22,9 @@
   --tag-count-color: rgba(125, 249, 256, 0.9);
   --tag-hover-color: rgba(251, 253, 255, 0.9);
   --tag-border-color: rgba(158, 158, 158, 0.8);
-  --c-text-code: rgba(244, 121, 40, 0.9);
+  --c-text-code: rgb(98, 182, 255);
   --c-text-strong: rgb(248, 93, 93);
-  --c-text-em: rgba(105, 253, 255, 0.9);
+  --c-text-em: rgb(32, 227, 218);
 }
 
 /* theme reset start */
