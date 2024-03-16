@@ -7,7 +7,7 @@ function buildBlog() {
 
     # 目标服务器和路径配置
     local targetPath="/opt/my-blog"
-    local remoteHostAlias="aliyun.8.218.root"
+    local remoteHostAlias="aliyun.47.116.root"
 
     # 构建项目
     pnpm build || { echo "Build failed"; exit 1; }

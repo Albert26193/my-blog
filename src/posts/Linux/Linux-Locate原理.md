@@ -1,11 +1,14 @@
 ---
 author: Albert
-date: 2024-02-22
+date: 2024-03-16
 date created: 2023-05-09
 date updated: 2023-01-10 15:25
 description: Linux基本常识
 link: https://www.notion.so/Linux-Locate-a665b02d675a47a5a23f775c6371267f
 notionID: a665b02d-675a-47a5-a23f-775c6371267f
+tags:
+  - Blog
+  - Linux
 title: Linux-Locate原理
 ---
 

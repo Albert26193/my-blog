@@ -2,96 +2,9 @@ import { defineConfig } from 'vitepress'
 import { getPosts } from './theme/serverUtils'
 import mathjax3 from 'markdown-it-mathjax3'
 import UnoCSS from 'unocss/vite'
-
-const customElements = [
-  'math',
-  'maction',
-  'maligngroup',
-  'malignmark',
-  'menclose',
-  'merror',
-  'mfenced',
-  'mfrac',
-  'mi',
-  'mlongdiv',
-  'mmultiscripts',
-  'mn',
-  'mo',
-  'mover',
-  'mpadded',
-  'mphantom',
-  'mroot',
-  'mrow',
-  'ms',
-  'mscarries',
-  'mscarry',
-  'mscarries',
-  'msgroup',
-  'mstack',
-  'mlongdiv',
-  'msline',
-  'mstack',
-  'mspace',
-  'msqrt',
-  'msrow',
-  'mstack',
-  'mstack',
-  'mstyle',
-  'msub',
-  'msup',
-  'msubsup',
-  'mtable',
-  'mtd',
-  'mtext',
-  'mtr',
-  'munder',
-  'munderover',
-  'semantics',
-  'math',
-  'mi',
-  'mn',
-  'mo',
-  'ms',
-  'mspace',
-  'mtext',
-  'menclose',
-  'merror',
-  'mfenced',
-  'mfrac',
-  'mpadded',
-  'mphantom',
-  'mroot',
-  'mrow',
-  'msqrt',
-  'mstyle',
-  'mmultiscripts',
-  'mover',
-  'mprescripts',
-  'msub',
-  'msubsup',
-  'msup',
-  'munder',
-  'munderover',
-  'none',
-  'maligngroup',
-  'malignmark',
-  'mtable',
-  'mtd',
-  'mtr',
-  'mlongdiv',
-  'mscarries',
-  'mscarry',
-  'msgroup',
-  'msline',
-  'msrow',
-  'mstack',
-  'maction',
-  'semantics',
-  'annotation',
-  'annotation-xml',
-  'mjx-container',
-  'mjx-assistive-mml'
-]
+import { customElements } from './theme/config/constant'
+import { nav } from './theme/config/nav'
+import { head } from './theme/config/head'
 
 //每页的文章数量
 const pageSize = 10
@@ -102,6 +15,7 @@ export default defineConfig({
       md.use(mathjax3)
     }
   },
+  head,
   vue: {
     template: {
       compilerOptions: {
@@ -125,27 +39,10 @@ export default defineConfig({
       themes: 'github-light',
       issueTerm: 'pathname'
     },
-    nav: [
-      {
-        text: 'Blogs',
-        items: [
-          {
-            text: 'pages',
-            link: '/pages/index'
-          },
-          {
-            text: 'timeline',
-            link: '/timeline'
-          }
-        ]
-      },
-      { text: 'Tags', link: '/tags' },
-      { text: 'About', link: '/about' }
-      // { text: 'Airene', link: 'http://airene.net' }  -- External link test
-    ],
     search: {
       provider: 'local'
     },
+    nav,
     outline: [2, 3],
     outlineTitle: 'Table of Contents',
     socialLinks: [{ icon: 'github', link: 'https://github.com/Albert26193/my-blog' }]
