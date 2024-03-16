@@ -220,6 +220,10 @@ h3 {
   text-decoration: none;
 }
 
+.post-info .tag:hover a {
+  color: var(--tag-hover-color);
+}
+
 .post-info .tag:hover {
   border: 1px solid var(--tag-info-color);
 }

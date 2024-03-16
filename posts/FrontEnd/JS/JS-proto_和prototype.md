@@ -14,7 +14,7 @@ title: JS-proto_和prototype
 
 # JS-proto\_和prototype
 
-> cite: <https://github.com/creeperyang/blog/issues/9>
+> !tip: <https://github.com/creeperyang/blog/issues/9>
 
 ## 1. `__proto__`
 

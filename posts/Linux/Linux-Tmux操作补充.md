@@ -12,7 +12,8 @@ title: Linux-Tmux操作补充
 
 # Linux-Tmux操作补充
 
-> cite: [session - How to join two tmux windows into one, as panes? - Stack Overflow](https://stackoverflow.com/questions/9592969/how-to-join-two-tmux-windows-into-one-as-panes)
+> [!tip]
+> - [session - How to join two tmux windows into one, as panes? - Stack Overflow](https://stackoverflow.com/questions/9592969/how-to-join-two-tmux-windows-into-one-as-panes)
 
 ## 1. `Tmux` 操作说明
 

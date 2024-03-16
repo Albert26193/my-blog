@@ -14,7 +14,7 @@ title: 计算机网络-TCP拥塞控制Reno算法
 # 计算机网络-TCP拥塞控制Reno算法
 
 > [!tip]
-> cite: [4.2 TCP 重传、滑动窗口、流量控制、拥塞控制 | 小林coding](https://xiaolincoding.com/network/3_tcp/tcp_feature.html#%E6%85%A2%E5%90%AF%E5%8A%A8)
+> tip: [4.2 TCP 重传、滑动窗口、流量控制、拥塞控制 | 小林coding](https://xiaolincoding.com/network/3_tcp/tcp_feature.html#%E6%85%A2%E5%90%AF%E5%8A%A8)
 
 ## 1. 概览
 

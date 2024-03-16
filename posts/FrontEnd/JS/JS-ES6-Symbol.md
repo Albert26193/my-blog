@@ -210,7 +210,7 @@ obj[uniqueMethodSymbol]() // 输出: This is a unique method!
 
 3. **全局注册表**：Symbol 还有一个全局注册表，你可以通过 `Symbol.for(key)` 和 `Symbol.keyFor(sym)` 在全局范围内保存和检索 Symbol。
 
-4. **内置 Symbol**：JavaScript 还有一些内置的 Symbol，比如 `Symbol.iterator`、`Symbol.asyncIterator`、`Symbol.toStringTag` 等，这些 Symbol 用来表示语言内部的行为。
+4. **内置 Symbol**：JavaScript 还有一些内置的 Symbol，比如 `Symbol.iterator`、`Symbol.asyntiprator`、`Symbol.toStringTag` 等，这些 Symbol 用来表示语言内部的行为。
 
 因此，Symbol 主要用于创建对象的唯一属性名，防止属性名冲突，以及表示语言内部的行为。
 
