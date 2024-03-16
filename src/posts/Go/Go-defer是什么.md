@@ -13,7 +13,9 @@ title: Go-Defer是什么
 
 # Go-Defer是什么
 
-> [!citaion] > `defer` 关键字的调用时机以及多次调用 `defer` 时执行顺序是如何确定的
+> [!info]
+>
+> - `defer` 关键字的调用时机以及多次调用 `defer` 时执行顺序是如何确定的
 
 ## 1. 什么是 `defer`
 

@@ -286,6 +286,10 @@ h3 {
   margin-left: 25%;
 }
 
+.VPHero .image-src {
+  visibility: hidden;
+}
+
 .VPHero .container .name {
   margin-top: 90px !important;
 }

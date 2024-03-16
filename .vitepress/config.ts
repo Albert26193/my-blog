@@ -94,7 +94,7 @@ const customElements = [
 ]
 
 //每页的文章数量
-const pageSize = 8
+const pageSize = 10
 
 export default defineConfig({
   markdown: {
@@ -118,7 +118,7 @@ export default defineConfig({
   ignoreDeadLinks: true,
   themeConfig: {
     posts: await getPosts(pageSize),
-    website: 'https://github.com/Albert26193', //copyright link
+    website: 'https://github.com/Albert26193/my-blog',
     // 评论的仓库地址
     comment: {
       repo: 'airene/vitepress-blog-pure',
@@ -148,7 +148,7 @@ export default defineConfig({
     },
     outline: [2, 3],
     outlineTitle: 'Table of Contents',
-    socialLinks: [{ icon: 'github', link: 'https://github.com/Albert26193' }]
+    socialLinks: [{ icon: 'github', link: 'https://github.com/Albert26193/my-blog' }]
   } as any,
   srcExclude: ['README.md'], // exclude the README.md , needn't to compiler
   vite: {
