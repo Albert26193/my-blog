@@ -7,6 +7,6 @@ aside: false
 import Page from "../../.vitepress/theme/components/Page.vue";
 import { useData } from "vitepress";
 const { theme } = useData();
-const posts = theme.value.posts.slice(72,80)
+const posts = theme.value.posts.slice(90,100)
 </script>
-<Page :posts="posts" :pageCurrent="10" :pagesNum="12" />
+<Page :posts="posts" :pageCurrent="10" :pagesNum="10" />
