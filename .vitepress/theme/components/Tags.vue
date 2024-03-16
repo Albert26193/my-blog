@@ -60,7 +60,7 @@ const toggleTag = (tag: string) => {
 
 .tag {
   display: inline-block;
-  padding: 3px 16px;
+  padding: 2px 14px;
   margin: 6px 8px;
   font-size: 0.875rem;
   line-height: 25px;
@@ -85,6 +85,7 @@ const toggleTag = (tag: string) => {
   font-size: 1.5rem;
   font-weight: 500;
   text-align: left;
+  color: var(--vp-c-brand);
 }
 
 @media screen and (max-width: 768px) {

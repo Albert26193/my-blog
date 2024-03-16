@@ -11,8 +11,6 @@ tags:
 title: JS-ES6-yield
 ---
 
-#JS #front-end
-
 # JS-ES6-yield
 
 ## 1. `yield` 执行过程

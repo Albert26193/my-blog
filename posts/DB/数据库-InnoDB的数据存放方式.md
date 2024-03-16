@@ -12,7 +12,9 @@ title: 数据库-InnoDB的数据存放方式
 
 # 数据库-InnoDB的数据存放方式
 
-> [!tip] >[从数据页的角度看 B+ 树 | 小林coding](https://xiaolincoding.com/mysql/index/page.html#innodb-%E6%98%AF%E5%A6%82%E4%BD%95%E5%AD%98%E5%82%A8%E6%95%B0%E6%8D%AE%E7%9A%84)
+> [!tip]
+>
+> - [从数据页的角度看 B+ 树 | 小林coding](https://xiaolincoding.com/mysql/index/page.html#innodb-%E6%98%AF%E5%A6%82%E4%BD%95%E5%AD%98%E5%82%A8%E6%95%B0%E6%8D%AE%E7%9A%84)
 
 ## 1. 数据页的结构
 

@@ -13,7 +13,9 @@ title: JS-ES6-变量提升和暂时性死区
 
 # JS-ES6-变量提升和暂时性死区
 
-> [ES6 标准入门（第2版）-阮一峰-微信读书](https://weread.qq.com/web/reader/d2432530813ab7c05g019f02k45c322601945c48cce2e120)
+> [!info]
+>
+> - [ES6 标准入门（第2版）-阮一峰-微信读书](https://weread.qq.com/web/reader/d2432530813ab7c05g019f02k45c322601945c48cce2e120)
 
 ## 1. 什么是变量提升
 

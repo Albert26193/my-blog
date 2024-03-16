@@ -14,7 +14,7 @@ title: JS-数据描述符和访问器描述符
 
 # JS-数据描述符和访问器描述符
 
-> [!MDN]
+> [!info]
 >
 > - 对象中存在的属性描述符有两种主要类型：**数据描述符** 和 **访问器描述符**。数据描述符是一个具有可写或不可写值的属性。访问器描述符是由 getter/setter 函数对描述的属性。描述符只能是这两种类型之一，不能同时为两者。
 > - Link: https://developer.mozilla.org/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/Object/defineProperty
@@ -50,7 +50,9 @@ if (1) {
 
 ### 1.2 `writable` 属性
 
-> [!MDN] > `writable`: 如果与属性相关联的值可以使用赋值运算符更改，则为 `true`。默认值为 `false`。
+> [!info]
+>
+> - `writable`: 如果与属性相关联的值可以使用赋值运算符更改，则为 `true`。默认值为 `false`。
 
 - 这个属性是 **数据描述符** 特有的，这一点很好理解，只有数据才有 `writable` 的意义。
 
@@ -118,8 +120,8 @@ Object.defineProperty(obj, 'name', { set: function () {} })
 
 - `configurable` 属性：
 
-> [!MDN] > `configurable`
-> 当设置为 `false` 时，
+> [!info]
+> `configurable`设置为 `false` 时:
 >
 > - 该属性的类型 **不能在数据属性和访问器属性之间更改**，且
 > - 该属性不可被删除，且

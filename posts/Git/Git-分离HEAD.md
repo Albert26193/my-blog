@@ -8,8 +8,6 @@ tags:
 title: Git-分离HEAD
 ---
 
-#Git
-
 # Git-分离HEAD
 
 ## 1. 分离HEAD的场景之一

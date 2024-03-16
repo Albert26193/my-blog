@@ -123,7 +123,8 @@ const props = defineProps({
 }
 
 .dark .link.active {
-  color: var(--vp-c-neutral);
+  color: var(--vp-c-neutral-inverse);
+  font-weight: bolder;
 }
 
 .link:first-child {

@@ -54,5 +54,3 @@ function buildBlog() {
 
 buildBlog
 ```
-
-#Blog

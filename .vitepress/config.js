@@ -133,7 +133,7 @@ export default defineConfig({
         search: {
             provider: 'local',
         },
-        //outline:[2,3],
+        outline:[2,3],
         outlineTitle: 'Table of Contents',
         socialLinks: [{ icon: 'github', link: 'https://github.com/Albert26193' }]
     },

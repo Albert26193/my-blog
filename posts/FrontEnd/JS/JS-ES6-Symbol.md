@@ -18,7 +18,7 @@ title: JS-ES6-Symbol
 - 是 `ES2015` 版本之后的 **8 大基本数据类型** 当中的一种
 - `Symbol` 类型的值是唯一且不可变的，通常作为对象的键来使用，这样可以确保对象的键能够 **全局唯一**，从而避免键的冲突。
 
-> [!MDN]
+> [!info]
 > 每个从 Symbol() 返回的 symbol 值都是唯一的。一个 symbol 值能作为对象属性的标识符；这是该数据类型仅有的目的。
 
 ```js
@@ -110,17 +110,17 @@ if (1) {
 
 ### 3.1 唯一性
 
-> [!MDN]
+> [!info]
 > 每个从 Symbol() 返回的 symbol 值都是唯一的。一个 symbol 值能作为对象属性的标识符；这是该数据类型仅有的目的。
 
 ### 3.2 不支持 `new` 运算符（不充分的构造函数）
 
-> [!MDN]
+> [!info]
 > 作为构造函数来说它并不完整，因为它不支持语法："new Symbol()"。
 
 ### 3.3 类型转化上的特点
 
-> [!MDN]
+> [!info]
 >
 > - 尝试将一个 `symbol` 值转换为一个 `number` 值时，会抛出一个 TypeError 错误 (e.g. `+sym` or `sym | 0`).
 > - 使用宽松相等时，`Object(sym) == sym returns true`.
@@ -135,7 +135,7 @@ if (1) {
 
 ### 3.4 `JSON.stringify()` 会直接忽视以 `symbol` 类型作为键值的属性
 
-> [!MDN]
+> [!info]
 > 当使用 JSON.stringify() 时，以 symbol 值作为键的属性会被完全忽略
 
 ```js
@@ -147,7 +147,7 @@ JSON.stringify({ [Symbol('foo')]: 'foo' })
 
 ### 3.5 在 `for...in` 迭代当中 **不可枚举**
 
-> [!MDN] > `Symbols` 在 `for...in` 迭代中不可枚举。另外，`Object.getOwnPropertyNames()` 不会返回 `symbol` 对象的属性，但是你能使用 `Object.getOwnPropertySymbols()` 得到它们。
+> [!info] > `Symbols` 在 `for...in` 迭代中不可枚举。另外，`Object.getOwnPropertyNames()` 不会返回 `symbol` 对象的属性，但是你能使用 `Object.getOwnPropertySymbols()` 得到它们。
 
 - 这种设计相对于利用 `Symbol` 实现对于某些属性的保护
 - 但是注意，`Symbol` 作为 `key` 的属性的 `descriptor` 当中，`enumerable` 属性依然是 `true`，但是 `JS` 还是强行限制了忽略 `Symbol` 作为 `key` 的属性。

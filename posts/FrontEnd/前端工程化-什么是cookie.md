@@ -71,5 +71,5 @@ https://cshihong.github.io/2019/06/19/HTTP%E5%8D%8F%E8%AE%AE%E5%88%86%E6%9E%90/
 
 ---
 
-> [!attention]
-> 注意：如果是JWT鉴权，这么做显然就不合适了，客户端仅仅发送Session ID回去是不行的，需要通过JWT token判断**你是谁**。
+> [!warning]
+> 注意：如果是 `JWT` 鉴权，这么做显然就不合适了，客户端仅仅发送 `Session ID`回去是不行的，需要通过 `JWT token` 判断**你是谁**。

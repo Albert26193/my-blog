@@ -211,5 +211,3 @@ sudo systemctl daemon-reload
 # 按照 /etc/fstab 重新挂载
 && mount -a
 ```
-
-#Blog

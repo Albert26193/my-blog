@@ -16,7 +16,7 @@ title: JS-深拷贝和浅拷贝
 
 ## 什么是深拷贝、浅拷贝？
 
-> [!ai]
+> [!note]
 >
 > - 浅拷贝是指将一个对象的引用复制给另一个对象，**两个对象共享同一块内存空间**（`JS` 里面并不完全是这样的）。如果其中任何一个对象修改了这个内存空间的值，那么另一个对象也会受到影响。**_对象的浅拷贝是其属性与拷贝源对象的属性共享相同引用（指向相同的底层值）的副本。_**
 > - 深拷贝是指将一个对象的内容复制到另一个对象中，**两个对象不共享同一块内存空间**。如果其中任何一个对象修改了这个内存空间的值，另一个对象不会受到影响。
@@ -116,7 +116,7 @@ Object.create(Object.getPrototypeOf(obj), Object.getOwnPropertyDescriptors(obj))
 > 1. 利用 `JSON.stringtify() + JSON.parse()` 将对象转化成 `JSON` 数组实现
 > 2. 利用递归浅拷贝实现
 
-1. ==method 1==： 利用 `JSON`
+1. **method 1**： 利用 `JSON`
 
 ```js
 function deepCloneWithJson(targetObject) {
@@ -126,7 +126,7 @@ function deepCloneWithJson(targetObject) {
 }
 ```
 
-2. ==method2==: 利用 `递归浅拷贝`
+2. **method2**: 利用 `递归浅拷贝`
 
 ```js
 function deepClone2(targetObject) {

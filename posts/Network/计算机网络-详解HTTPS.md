@@ -14,7 +14,9 @@ title: 计算机网络-详解HTTPS
 
 # 计算机网络-详解HTTPS
 
-> [How does HTTPS work? (Episode 6) - by Alex Xu](https://blog.bytebytego.com/p/how-does-https-work-episode-6)
+> [!info]
+>
+> - [How does HTTPS work? (Episode 6) - by Alex Xu](https://blog.bytebytego.com/p/how-does-https-work-episode-6)
 
 ## 1. HTTPS 工作流程
 
@@ -88,7 +90,7 @@ title: 计算机网络-详解HTTPS
 
 - 以上过程的 `ai` 总结如下：
 
-> [!Ai]
+> [!note]
 > HTTPS的加密过程涉及到一个名为SSL/TLS握手的过程，该过程的目的是在客户端和服务器之间建立一个安全的连接。以下是这个过程的简化版步骤：
 >
 > 1. **客户端向服务器发送“Client hello”消息**：这个消息中包含了客户端支持的SSL/TLS版本，可用的加密算法（称为“密码套件”），以及一个客户端生成的随机数（Client Random）。

@@ -18,7 +18,7 @@ title: JS-Reflect
 - `ES6` 标准引入的一个**全局对象**，提供了一系列用于**操作对象**的方法。
 - 这些方法可以便捷地实现对于 `JS` 的**内部操作**
 
-> [!ai] >`Reflect` 的主要目标是：
+> [!note] >`Reflect` 的主要目标是：
 >
 > 1.  _整合_：JavaScript 语言中的内部操作变得更为一致。例如，之前 `Object.defineProperty()` 在失败时抛出异常，而赋值操作则返回 `false`。使用 `Reflect.defineProperty()` 和 `Reflect.set()`，这两种操作在失败时都会返回 `false`。
 > 2.  _扩展能力_：某些方法（如 `Reflect.apply()` 和 `Reflect.construct()`）提供了对旧有功能的更为灵活的调用方式。

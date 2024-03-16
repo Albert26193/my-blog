@@ -11,8 +11,6 @@ tags:
 title: JS-如何判断对象为空
 ---
 
-#JS #interview
-
 # JS-如何判断对象为空
 
 - 利用 `Reflect` 判断对象是否为空是最佳方式

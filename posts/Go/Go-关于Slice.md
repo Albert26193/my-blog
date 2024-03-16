@@ -11,8 +11,6 @@ tags:
 title: Go-关于Slice
 ---
 
-#Go #back-end #interview
-
 # Go-关于Slice
 
 > [!info]

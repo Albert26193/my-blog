@@ -11,8 +11,6 @@ tags:
 title: 计算机网络-TCP连接的11种状态
 ---
 
-#network #interview
-
 # 计算机网络-TCP连接的11种状态
 
 ## 1. 11种状态参考表

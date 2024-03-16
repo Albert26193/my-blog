@@ -10,8 +10,6 @@ tags:
 title: JS-闭包
 ---
 
-#JS #front-end
-
 # JS-闭包
 
 ## 1. 闭包的定义

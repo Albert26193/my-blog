@@ -11,8 +11,6 @@ tags:
 title: 计算机网络-ISN和回绕问题
 ---
 
-#network #interview
-
 # 计算机网络-ISN和回绕问题
 
 ## 1. 对于客户端和服务端，都需要ISN

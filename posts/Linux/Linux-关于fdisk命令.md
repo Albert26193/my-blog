@@ -15,7 +15,9 @@ title: Linux-关于 fdisk 命令
 
 ## 1. fdisk 命令是什么
 
-> [!citation] > https://wangchujiang.com/linux-command/c/fdisk.html
+> [!info]
+>
+> - https://wangchujiang.com/linux-command/c/fdisk.html
 
 - 用来完成磁盘分区的管理工作
 - 比如创建、删除、修改分区的大小和对应的文件系统
@@ -215,7 +217,7 @@ Partition table entries are not in disk order.
 
 - 首先明确一个概念，格式化分区指的是擦除数据并且重新指定文件系统等一些列操作，具体解释如下
 
-> [!ai]
+> [!note]
 >
 > - 在格式化过程中，存储介质上的现有数据将被擦除，并根据所选择的文件系统类型重新创建文件系统结构和相关的元数据。这使得存储介质能够被操作系统识别，并能够存储和检索数据。
 

@@ -10,7 +10,8 @@ title: SQL-常见日志
 
 # SQL-常见日志
 
-> [!info] >[MySQL 日志：undo log、redo log、binlog 有什么用？ | 小林coding](https://www.xiaolincoding.com/mysql/log/how_update.html#%E4%B8%BA%E4%BB%80%E4%B9%88%E9%9C%80%E8%A6%81-undo-log)
+> [!info] 
+> - [MySQL 日志：undo log、redo log、binlog 有什么用？ | 小林coding](https://www.xiaolincoding.com/mysql/log/how_update.html#%E4%B8%BA%E4%BB%80%E4%B9%88%E9%9C%80%E8%A6%81-undo-log)
 
 ## 1. `undo log`
 

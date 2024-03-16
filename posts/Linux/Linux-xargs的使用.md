@@ -76,7 +76,7 @@ find . -type f -name 'tmp*' -print0 | xargs -0 rm -f
 
 ---
 
-> [!AI]
+> [!note]
 > 例如，假设你有一个名为 file with spaces.txt 的文件，你想用 ls 命令查看它的详细信息。你可能会尝试使用下面的命令：
 
 ```sh

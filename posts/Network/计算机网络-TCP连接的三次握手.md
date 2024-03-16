@@ -13,7 +13,6 @@ tags:
 title: 计算机网络-TCP连接的三次握手
 ---
 
-#interview #network
 
 # 计算机网络-TCP连接的三次握手
 
