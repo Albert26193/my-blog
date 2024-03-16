@@ -27,9 +27,9 @@
 </template>
 
 <script lang="ts" setup>
-import { computed, onMounted, ref } from 'vue'
+import { computed, ref } from 'vue'
 import { useData, withBase } from 'vitepress'
-import { initTags } from '../functions'
+import { initTags } from '../utils'
 
 const url = location.href.split('?')[1]
 const params = new URLSearchParams(url)
@@ -55,7 +55,7 @@ const toggleTag = (tag: string) => {
   font-weight: 700;
   font-size: 1rem;
   margin-left: 8px;
-  color: var(--tag-count-color);
+  color: var(--vp-c-brand);
 }
 
 .tags .count:hover {
@@ -72,7 +72,6 @@ const toggleTag = (tag: string) => {
   transition: 0.4s;
   color: var(--vp-c-text-1);
   cursor: pointer;
-  box-sizing: border-box;
 }
 
 .tags .tag.active {
@@ -113,3 +112,4 @@ const toggleTag = (tag: string) => {
   }
 }
 </style>
+../utils

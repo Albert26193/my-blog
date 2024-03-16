@@ -4,7 +4,7 @@
     :key="index"
     class="post-list"
   >
-    <div class="post-header mt-2">
+    <div class="post-header -mt-1">
       <div class="post-title">
         <a :href="withBase(article.regularPath)"> {{ article.frontMatter.title }}</a>
       </div>
@@ -24,7 +24,7 @@
         v-for="item in article.frontMatter.tags"
         class="hover:.dark:bg-blue-500 hover:.dark:text-slate-800 hover:bg-blue-200 tag rounded-full hover:font-extrabold"
       >
-        <a :href="withBase(`/pages/tags.html?tag=${item}`)"> {{ item }}</a>
+        <a :href="withBase(`/tags.html?tag=${item}`)"> {{ item }}</a>
       </span>
     </div>
   </div>
@@ -35,7 +35,7 @@
       :class="{ active: pageCurrent === i }"
       v-for="i in pagesNum"
       :key="i"
-      :href="withBase(i === 1 ? '/index.html' : `/page_${i}.html`)"
+      :href="withBase(i === 1 ? '/pages/index.html' : `/pages/page_${i}.html`)"
       >{{ i }}</a
     >
   </div>
@@ -73,7 +73,7 @@ const props = defineProps({
 
 <style scoped>
 .post-list {
-  border-bottom: 1px dashed rgba(100, 100, 100, 0.8);
+  border-bottom: 1px dashed var(--vp-c-brand);
   padding: 24px 0 14px 0;
 }
 

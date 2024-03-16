@@ -166,7 +166,7 @@ h3 {
 /* for aside end */
 /* theme reset end */
 
-/*tags and archives page style*/
+/*tags and timeline page style*/
 .posts {
   padding: 4px 0 4px 25px;
   display: flex;
@@ -271,4 +271,40 @@ h3 {
 .vp-doc :not(pre, div) > code {
   color: var(--c-text-code);
   margin: 0 2px;
+}
+
+/* hero */
+:root {
+  --vp-home-hero-name-color: transparent;
+  --vp-home-hero-name-background: -webkit-linear-gradient(315deg, #4d7aff 25%, #1bf4fc);
+  --vp-home-hero-image-background-image: linear-gradient(-45deg, #33fcc3 50%, #00a8ea 40%);
+  --vp-home-hero-image-filter: blur(90px);
+}
+
+.VPHero .image-bg {
+  margin-top: -15%;
+  margin-left: 25%;
+}
+
+.VPHero .container .name {
+  margin-top: 90px !important;
+}
+
+.VPHero .name .clip {
+  font-size: 3.3rem !important;
+  font-weight: extra-bold;
+}
+
+.VPHero .main .tagline {
+  font-size: 1.2rem;
+  font-weight: bold;
+}
+
+.VPFeatures .items .item {
+  margin-top: 5%;
+}
+
+.VPFeatures .items .item .box .details {
+  margin-top: 3%;
+  text-indent: 5%;
 }

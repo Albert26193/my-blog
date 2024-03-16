@@ -1,7 +1,7 @@
 import DefaultTheme from 'vitepress/theme'
 
 import NewLayout from './components/NewLayout.vue'
-import Archives from './components/Archives.vue'
+import Timeline from './components/Timeline.vue'
 import Tags from './components/Tags.vue'
 import Page from './components/Page.vue'
 
@@ -14,7 +14,7 @@ export default {
     enhanceApp({ app }) {
         // register global compoment
         app.component('Tags', Tags)
-        app.component('Archives', Archives)
+        app.component('Timeline', Timeline)
         app.component('Page', Page)
     }
 }

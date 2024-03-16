@@ -21,7 +21,7 @@
 <script lang="ts" setup>
 import { useData, withBase } from 'vitepress'
 import { computed } from 'vue'
-import { useYearSort } from '../functions'
+import { useYearSort } from '../utils'
 
 const { theme } = useData()
 const data = computed(() => useYearSort(theme.value.posts))
@@ -35,3 +35,4 @@ const data = computed(() => useYearSort(theme.value.posts))
   font-family: var(--date-font-family);
 }
 </style>
+../utils

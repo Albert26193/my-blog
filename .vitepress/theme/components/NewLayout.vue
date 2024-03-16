@@ -11,7 +11,7 @@
           v-for="item in $frontmatter.tags"
           class="mt-2 hover:.dark:bg-blue-500 hover:bg-blue-200 hover:.dark:text-slate-100 tag rounded-full"
         >
-          <a :href="withBase(`/pages/tags.html?tag=${item}`)"> {{ item }}</a>
+          <a :href="withBase(`/tags.html?tag=${item}`)"> {{ item }}</a>
         </span>
       </div>
     </template>
