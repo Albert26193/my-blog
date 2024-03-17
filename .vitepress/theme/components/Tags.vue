@@ -11,7 +11,16 @@
       <span class="count">{{ data[key].length }}</span>
     </span>
   </div>
-  <div class="tag-header mt-6 mb-2 mr-1">{{ selectTag }}</div>
+  <div
+    class="tag-header mt-6 mb-2"
+    v-if="selectTag.length"
+  >
+    <img
+      :src="tagPng"
+      class="w-8 h-8 inline tag-img"
+    />
+    <span class="h-80">{{ selectTag }}</span>
+  </div>
   <a
     :href="withBase(article.regularPath)"
     v-for="(article, index) in data[selectTag]"
@@ -30,6 +39,7 @@
 import { computed, ref } from 'vue'
 import { useData, withBase } from 'vitepress'
 import { initTags } from '../utils'
+import tagPng from '../assets/icon/tag.png'
 
 const url = location.href.split('?')[1]
 const params = new URLSearchParams(url)
@@ -64,8 +74,8 @@ const toggleTag = (tag: string) => {
 
 .tag {
   display: inline-block;
-  padding: 1px 10px;
-  margin: 4px 4px;
+  padding: 1px 12px;
+  margin: 4px 4px 6px 4px;
   font-size: 0.875rem;
   line-height: 25px;
   border: 1px solid var(--tag-border-color);
@@ -100,6 +110,11 @@ const toggleTag = (tag: string) => {
   font-weight: 500;
   text-align: left;
   color: var(--vp-c-brand);
+}
+
+.tag-img {
+  margin-right: 8px;
+  vertical-align: -45%;
 }
 
 @media screen and (max-width: 768px) {

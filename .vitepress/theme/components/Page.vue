@@ -19,15 +19,13 @@
       class="mt-4"
     ></div>
     <div class="post-info">
-      <span class="mr-4">
-        <span>
-          <img
-            :src="timePng"
-            class="h-4 w-4 inline-block time-img"
-          />
-        </span>
-        {{ article.frontMatter.date }}</span
-      >
+      <span class="mr-2">
+        <img
+          :src="timePng"
+          class="time-img"
+        />
+        <span class="mt-2"> {{ article.frontMatter.date }}</span>
+      </span>
       <span
         v-for="item in article.frontMatter.tags"
         class="hover:.dark:bg-blue-500 hover:.dark:text-slate-800 hover:bg-blue-200 tag rounded-full hover:font-extrabold"
@@ -175,8 +173,4 @@ const props = defineProps({
   }
 }
 
-.post-info .time-img {
-  margin-bottom: -4px;
-  color: var(--vp-c-brand);
-}
 </style>
