@@ -1,6 +1,9 @@
 :root {
   --vp-c-brand: #2563eb !important;
-  --vp-font-family-base: 'PingFang SC', 'Microsoft Yahei', sans-serif;
+  --vp-font-family-base: 'Chinese Quotes', 'Inter var', 'Inter', ui-sans-serif, system-ui,
+    -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', Helvetica, Arial,
+    'Noto Sans', sans-serif, 'Apple Color Emoji', 'Segoe UI Emoji', 'Segoe UI Symbol',
+    'Noto Color Emoji';
 
   /* theme color */
   --li-dot-color: var(--vp-c-brand);
@@ -50,10 +53,10 @@
 
 .title {
   /*color: var(--vp-c-text-1);*/
-  font-weight: 900 !important;
+  font-weight: 700 !important;
   font-size: 1.3rem !important;
   /* text-transform: uppercase; */
-  font-family: var(--date-font-family);
+  font-family: var(--vp-font-family-base);
   color: var(--vp-c-brand) !important;
 }
 
@@ -192,6 +195,7 @@ h3 {
 .post-container:hover {
   color: var(--vp-c-brand);
 }
+
 .date {
   color: var(--date-color);
   font-family: var(--date-font-family);
@@ -301,9 +305,9 @@ h3 {
   margin-top: 90px !important;
 }
 
-.VPHero .name .clip {
-  font-size: 3.3rem !important;
-  font-weight: extra-bold;
+.VPHero .container .name .clip {
+  font-size: 3.4rem !important;
+  font-weight: 700 !important;
 }
 
 .VPHero .main .tagline {
