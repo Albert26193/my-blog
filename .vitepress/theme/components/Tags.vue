@@ -4,7 +4,7 @@
       @click="toggleTag(String(key))"
       v-for="(_, key, index) in data"
       :key="`tag-${index}`"
-      class="tag hover:.dark:bg-blue-500 hover:bg-blue-200 rounded-full hover:font-extrabold"
+      class="tag hover:.dark:bg-blue-500 hover:bg-blue-200 rounded-full"
       :class="{ active: selectTag == String(key) }"
     >
       {{ key }}
@@ -62,7 +62,7 @@ const toggleTag = (tag: string) => {
 
 .tags .count {
   margin-left: 2px;
-  font-weight: 700;
+  font-weight: 600;
   font-size: 1rem;
   margin-left: 8px;
   color: var(--vp-c-brand);
@@ -88,6 +88,7 @@ const toggleTag = (tag: string) => {
   border: 1px solid var(--vp-c-brand);
   color: var(--vp-c-brand);
   box-sizing: border-box;
+  font-weight: 900;
 }
 
 .tags .tag.active .count {
@@ -97,7 +98,7 @@ const toggleTag = (tag: string) => {
 
 .tag:hover {
   border: 1px solid var(--tag-info-color);
-  font-weight: 800;
+  font-weight: 600;
 }
 
 .tag:hover .count {
