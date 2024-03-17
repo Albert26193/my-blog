@@ -73,7 +73,7 @@ const props = defineProps({
 
 <style scoped>
 .post-list {
-  border-bottom: 1px dashed var(--vp-c-brand);
+  border-bottom: 1px solid rgba(78, 145, 200, 0.586);
   padding: 24px 0 14px 0;
 }
 
