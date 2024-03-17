@@ -19,7 +19,15 @@
       class="mt-4"
     ></div>
     <div class="post-info">
-      {{ article.frontMatter.date }}
+      <span class="mr-4">
+        <span>
+          <img
+            :src="timePng"
+            class="h-4 w-4 inline-block time-img"
+          />
+        </span>
+        {{ article.frontMatter.date }}</span
+      >
       <span
         v-for="item in article.frontMatter.tags"
         class="hover:.dark:bg-blue-500 hover:.dark:text-slate-800 hover:bg-blue-200 tag rounded-full hover:font-extrabold"
@@ -44,6 +52,8 @@
 <script lang="ts" setup>
 import { withBase } from 'vitepress'
 import { PropType } from 'vue'
+
+import timePng from '../assets/icon/time.png'
 
 interface Article {
   regularPath: string
@@ -163,5 +173,10 @@ const props = defineProps({
     overflow: hidden;
     margin: 0.5rem 0 1rem;
   }
+}
+
+.post-info .time-img {
+  margin-bottom: -4px;
+  color: var(--vp-c-brand);
 }
 </style>

@@ -26,6 +26,7 @@
     ".vitepress/**/*.d.ts",
     ".vitepress/**/*.tsx",
     ".vitepress/**/*.vue",
+    ".vitepress/**/*.png",
     "shims-vue.d.ts"
   ],
   "exclude": [

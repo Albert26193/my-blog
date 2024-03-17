@@ -205,10 +205,10 @@ h3 {
   display: inline-flex;
   align-items: center;
   justify-content: center;
-  padding: 1px 12px;
+  padding: 0px 8px;
   text-align: center;
   /* background-color: var(--tag-info-color); */
-  margin: 0px 5px 0px 12px;
+  margin: 0px 4px 0px 4px;
   transition: 0.4s;
   border: 1px solid var(--tag-border-color);
 }

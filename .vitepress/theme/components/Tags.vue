@@ -44,7 +44,7 @@ const toggleTag = (tag: string) => {
 
 <style scoped>
 .tags {
-  margin-top: 14px;
+  margin-top: 12px;
   display: flex;
   flex-wrap: wrap;
   font-weight: 600;
@@ -64,8 +64,8 @@ const toggleTag = (tag: string) => {
 
 .tag {
   display: inline-block;
-  padding: 2px 14px;
-  margin: 4px 6px;
+  padding: 1px 10px;
+  margin: 4px 4px;
   font-size: 0.875rem;
   line-height: 25px;
   border: 1px solid var(--tag-border-color);
@@ -77,7 +77,6 @@ const toggleTag = (tag: string) => {
 .tags .tag.active {
   border: 1px solid var(--vp-c-brand);
   color: var(--vp-c-brand);
-  font-weight: 900;
   box-sizing: border-box;
 }
 
@@ -112,4 +111,3 @@ const toggleTag = (tag: string) => {
   }
 }
 </style>
-../utils
