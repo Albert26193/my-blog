@@ -10,7 +10,7 @@ export const metaData = {
 
 export const head: HeadConfig[] = [
   ['link', { rel: 'icon', href: '/favicon.ico' }],
-  ['meta', { name: 'author', content: 'Charles7c' }],
+  ['meta', { name: 'author', content: 'xxxxx' }],
   ['meta', { name: 'keywords', content: '个人博客 VitePress 静态站点' }],
 
   ['meta', { name: 'HandheldFriendly', content: 'True' }],

@@ -1,6 +1,6 @@
 ---
 author: Albert
-date: 2024-03-09
+date: 2024-03-27
 date created: 2023-05-09
 date updated: 2022-12-07 23:10
 tags:
@@ -12,8 +12,7 @@ title: Linux-Tmux操作补充
 
 # Linux-Tmux操作补充
 
-> [!tip]
-> - [session - How to join two tmux windows into one, as panes? - Stack Overflow](https://stackoverflow.com/questions/9592969/how-to-join-two-tmux-windows-into-one-as-panes)
+> cite: [session - How to join two tmux windows into one, as panes? - Stack Overflow](https://stackoverflow.com/questions/9592969/how-to-join-two-tmux-windows-into-one-as-panes)
 
 ## 1. `Tmux` 操作说明
 
@@ -44,7 +43,7 @@ tmux join-pane -s :3.1
 tmux join-pane -t :4
 ```
 
-- `join-pane -t` 当中的 `t` 是 `target` 的意思，指将当前 `pane` 放到 `target` 指定的 `window` 当中去。
+- `join-pane -t` 当中的 `t` 是 `target` 的意思，指将当前 `pane` 放到  `target` 指定的 `window` 当中去。 
 
 ### 2.3 将当前 `pane` 和同一 `window` 中的 `pane 2` 交换
 
@@ -54,6 +53,15 @@ tmux join-pane -t :4
 tmux swap-pane -t 2
 ```
 
+### 2.4 将当前 `pane` 移动到一个新窗口当中
+
+```bash
+tmux break-pane -t :
+```
+
+- ` : ` 省略参数表示默认开一个新窗口
+- 也可以指定具体的窗口号，比如 `:8`，就是将当前 `pane` 移动到全新 `window 8` 当中去
+
 ## 3. 窗格操作总结
 
 ### 3.1 动词
@@ -61,6 +69,7 @@ tmux swap-pane -t 2
 - `join-pane`：以 `pane` 为单位进行 `join`
 - `swap-window`：以 `window` 为单位进行 `swap`
 - `swap-pane`：以 `window` 为单位进行 `swap`
+- `break-pane`：以 `pane` 为单位进行 `break`，`break` 到一个新 `window` 当中。
 
 ### 3.2 介词
 

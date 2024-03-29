@@ -41,7 +41,10 @@ import { useData, withBase } from 'vitepress'
 import { initTags } from '../utils'
 import tagPng from '../assets/icon/tag.png'
 
-const url = location.href.split('?')[1]
+let url
+if (typeof window != 'undefined') {
+  url = window.location.href.split('?')[1]
+}
 const params = new URLSearchParams(url)
 const { theme } = useData()
 const data = computed(() => initTags(theme.value.posts))
