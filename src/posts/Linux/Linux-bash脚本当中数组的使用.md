@@ -83,7 +83,7 @@ echo ${#fruit[@]}
 
 ```shell
 for index in ${!fruit[@]}
-do 
+do
   echo ${fruit[$index]}
 done
 ```

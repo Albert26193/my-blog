@@ -4,6 +4,7 @@ date: 2024-02-24
 date created: 2024-02-19
 date updated: 2024-02-19 12:44
 tags:
+  - Blog
   - DB
   - interview
 title: 数据库-BufferPool的原理
@@ -22,7 +23,7 @@ title: 数据库-BufferPool的原理
 ### 2.1 空间结构
 
 - 大小默认为 `128MB`，可以通过参数进行手动调整。
-- 缓存的时候，不会细颗粒度地针对*记录*去做缓存，而是将该记录所在的 *页* 一起放到 `BufferPool` 当中，这里的 *页*，就是 `InnoDB` 引擎存储、管理数据的基本单元，默认 `16KB` 的 `Page`。
+- 缓存的时候，不会细颗粒度地针对*记录*去做缓存，而是将该记录所在的 _页_ 一起放到 `BufferPool` 当中，这里的 _页_，就是 `InnoDB` 引擎存储、管理数据的基本单元，默认 `16KB` 的 `Page`。
 - 其空间结构大概如下图所示：
 
 ![image.png|500](https://img-20221128.oss-cn-shanghai.aliyuncs.com/img-2023-05/20240224165420.png)
@@ -34,7 +35,7 @@ title: 数据库-BufferPool的原理
 ### 2.2 页管理策略
 
 `Innodb` 通过三种链表来管理缓页：
+
 - `Free List` （空闲页链表），管理空闲页；
 - `Flush List` （脏页链表），管理脏页；
 - `LRU List`，管理脏页+干净页，将最近且经常查询的数据缓存在其中，而不常查询的数据就淘汰出去。；
-

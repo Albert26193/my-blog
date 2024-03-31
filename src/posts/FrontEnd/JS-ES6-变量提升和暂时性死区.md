@@ -5,6 +5,7 @@ date created: 2023-12-25
 date updated: 2023-10-30 12:14
 description: JS基础知识
 tags:
+  - Blog
   - JS
   - front-end
 title: JS-ES6-变量提升和暂时性死区
@@ -18,16 +19,17 @@ title: JS-ES6-变量提升和暂时性死区
 
 [[../基础/Object/JS-变量提升|JS-变量提升]]
 
-- 在代码执行之前，*JavaScript 引擎会将变量声明（但不包括赋值）提升到函数或全局作用域的顶部。*
+- 在代码执行之前，_JavaScript 引擎会将变量声明（但不包括赋值）提升到函数或全局作用域的顶部。_
 - 这意味着在变量被声明之前，它们就可以被访问和使用。
 - 只有声明会被提升，而不包括初始化或赋值。这意味着变量在代码中的实际声明位置之前可以被引用，但它们的值将是 `undefined`。当代码执行到变量声明的位置时，变量会被赋予实际的值。
 
 ---
+
 - 比如下面的代码：
 
 ```js
 console.log(x) // 不报错，只是 undefined
-var x = 100;
+var x = 100
 console.log(x) // 100
 ```
 
@@ -44,11 +46,11 @@ console.log(x) // 100
 - 比如下面的代码
 
 ```js
-var temp = 123;
+var temp = 123
 
 if (1) {
   temp = 'abc' // Reference Error
-  let temp;
+  let temp
 }
 ```
 
@@ -61,10 +63,10 @@ if (1) {
   // >>>>>> 暂时性死区开始
   temp = 'abc'
   console.log(temp)
-  temp += 'd';
+  temp += 'd'
 
   // >>>>>>> 暂时性死区结束
-  let temp;
+  let temp
   console.log(temp) // undefined
 }
 ```
@@ -91,7 +93,7 @@ function bar(x = 2, y = x) {
   return [x, y]
 }
 
-bar(); // [2, 2]
+bar() // [2, 2]
 ```
 
 ---

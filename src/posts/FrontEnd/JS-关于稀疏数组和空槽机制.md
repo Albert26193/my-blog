@@ -5,6 +5,7 @@ date created: 2023-07-10
 date updated: 2023-07-10 16:00
 description: JS基础知识
 tags:
+  - Blog
   - JS
   - interview
   - front-end
@@ -22,9 +23,9 @@ title: JS- 关于稀疏数组和空槽机制
 ```js
 // url: https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/length
 // utils
-const printArray = (someArray, index)=> {
+const printArray = (someArray, index) => {
   console.log('---------print element---------')
-  someArray.forEach( x => console.log(typeof x))
+  someArray.forEach((x) => console.log(typeof x))
   console.log(someArray)
   console.log('---------print index  ---------')
   console.log(index)
@@ -42,12 +43,12 @@ if (1) {
   printArray(testArray1, tempIndex1 + 2)
 
   //test 2^32
-  const tempIndex2 = 2**32
+  const tempIndex2 = 2 ** 32
   testArray1[tempIndex2] = 1
   printArray(testArray1, tempIndex2 - 2)
   printArray(testArray1, tempIndex2 + 2)
 
-  const tempIndex3 = 2**32 - 2
+  const tempIndex3 = 2 ** 32 - 2
   testArray1[tempIndex3] = 1
   // printArray(testArray1, tempIndex3 - 2)
   // printArray(testArray1, tempIndex3 + 2)
@@ -55,7 +56,6 @@ if (1) {
 
   // testArray1.length = 2**32 // error
 }
-
 ```
 
 ## 2. `length` 属性
@@ -64,25 +64,25 @@ if (1) {
 
 > [!cite]
 > 数组对象会观察 length 属性，并自动将 length 值与数组的内容同步。这意味着：
+>
 > - 设置 length 小于当前长度的值将会截断数组——超过新 length 的元素将被删除。
 > - 设置超过当前 length 的任何数组索引（小于 $2^{32}$ 的非负整数）将会扩展数组——length 属性增加以反映新的最高索引。
 > - 将 length 设置为无效值（例如负数或非整数）会引发 RangeError 异常。
 
 | Writable     | yes |
-|:-------------|:----|
+| :----------- | :-- |
 | Enumerable   | no  |
-| Configurable | no  |  
+| Configurable | no  |
 
 - 如果希望 `length` 有着更加更加严格的限制，可以在 `strict` 模式下将 `length` 属性描述符当中的 `writable` 设置为 `false`，代码如下
 
 ```js
-"use strict";
+'use strict'
 
-const numbers = [1, 2, 3, 4, 5];
-Object.defineProperty(numbers, "length", { writable: false });
-numbers[5] = 6; // TypeError: Cannot assign to read only property 'length' of object '[object Array]'
-numbers.push(5); // // TypeError: Cannot assign to read only property 'length' of object '[object Array]'
-
+const numbers = [1, 2, 3, 4, 5]
+Object.defineProperty(numbers, 'length', { writable: false })
+numbers[5] = 6 // TypeError: Cannot assign to read only property 'length' of object '[object Array]'
+numbers.push(5) // // TypeError: Cannot assign to read only property 'length' of object '[object Array]'
 ```
 
 - 在实现层面，`JavaScript` 实际上是将元素作为标准的对象属性来存储，把数组索引作为属性名。那么，`length` 属性本质上控制了 **哪些属性是可以被当做索引来访问**。数组的 `length` 大小在 `0-2^32 - 1` 之间
@@ -109,19 +109,19 @@ numbers.push(5); // // TypeError: Cannot assign to read only property 'length' o
 ```js
 if (0) {
   // treat as undefined, 大部分是比较老的方法
-  const testArray2 = [1, 2, , , 5]; // Create a sparse testArray2ay
+  const testArray2 = [1, 2, , , 5] // Create a sparse testArray2ay
 
   // Indexed access
-  console.log(testArray2[2]); // undefined
+  console.log(testArray2[2]) // undefined
 
   // For...of
   for (const i of testArray2) {
-    console.log(i);
+    console.log(i)
   }
   // Logs: 1 2 undefined undefined 5
 
   // Spreading
-  const another = [...testArray2]; // "another" is [ 1, 2, undefined, undefined, 5 ]
+  const another = [...testArray2] // "another" is [ 1, 2, undefined, undefined, 5 ]
 }
 
 // not treat as undefined, 绝大多数常用的Functional API都会进行in检查
@@ -132,7 +132,7 @@ if (0) {
   }
 
   testArray3[100] = 1
-  testArray3.forEach(x => console.log(x))
+  testArray3.forEach((x) => console.log(x))
 }
 ```
 
@@ -141,28 +141,28 @@ if (0) {
 ```js
 // Array constructor:
 if (1) {
-  const a = Array(5); // [ <5 empty items> ]
+  const a = Array(5) // [ <5 empty items> ]
   for (const i of a) {
     console.log(a[i])
   }
 
   // Consecutive commas in array literal:
-  const b = [1, 2, , , 5]; // [ 1, 2, <2 empty items>, 5 ]
+  const b = [1, 2, , , 5] // [ 1, 2, <2 empty items>, 5 ]
   for (const i of b) {
     console.log(b[i])
   }
 
   // Directly setting a slot with index greater than array.length:
-  const c = [1, 2];
-  c[4] = 5; // [ 1, 2, <2 empty items>, 5 ]
+  const c = [1, 2]
+  c[4] = 5 // [ 1, 2, <2 empty items>, 5 ]
 
   // Elongating an array by directly setting .length:
-  const d = [1, 2];
-  d.length = 5; // [ 1, 2, <3 empty items> ]
+  const d = [1, 2]
+  d.length = 5 // [ 1, 2, <3 empty items> ]
 
   // Deleting an element:
-  const e = [1, 2, 3, 4, 5];
-  delete e[2]; // [ 1, 2, <1 empty item>, 4, 5 ]
+  const e = [1, 2, 3, 4, 5]
+  delete e[2] // [ 1, 2, <1 empty item>, 4, 5 ]
 }
 ```
 
@@ -175,11 +175,10 @@ if (1) {
 ```js
 if (1) {
   function hasEmptySlot(array) {
-    return !array.includes(undefined);
+    return !array.includes(undefined)
   }
 
-  console.log(hasEmptySlot([1, 2, , 4]));  // 输出: true
-  console.log(hasEmptySlot([1, 2, 3, 4]));  // 输出: false
+  console.log(hasEmptySlot([1, 2, , 4])) // 输出: true
+  console.log(hasEmptySlot([1, 2, 3, 4])) // 输出: false
 }
-
 ```

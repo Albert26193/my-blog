@@ -4,10 +4,12 @@ date: 2024-02-22
 date created: 2023-05-09
 description: info
 tags:
+  - Blog
   - Git
 title: Git-分离HEAD
 ---
-#Git 
+
+#Git
 
 # Git-分离HEAD
 
@@ -15,7 +17,7 @@ title: Git-分离HEAD
 
 - 比如需要打tag
 - 例如`Learn Git branching`
- ![image.png|300](https://img-20221128.oss-cn-shanghai.aliyuncs.com/img-2022-11/20230108210925.png)
+  ![image.png|300](https://img-20221128.oss-cn-shanghai.aliyuncs.com/img-2022-11/20230108210925.png)
 - 利用`git checkout c2`来将目前的`HEAD`指针指向`c2`，然后执行`git tag v1`
 
 ```shell
@@ -32,7 +34,7 @@ git chekcout main
 
 - 注意：`HEAD`分离的情况下，无法使用`git reset --hard <xxxxxx>`命令
 - 一个疑问: 这个场景当中，上述代码的第三步如果执行`git checkout c5`，能够使得分离的`HEAD`重新合并吗？并不可以，`branch`和`commit`是两个概念
-![image.png|425](https://img-20221128.oss-cn-shanghai.aliyuncs.com/img-2022-11/20230108211747.png)
+  ![image.png|425](https://img-20221128.oss-cn-shanghai.aliyuncs.com/img-2022-11/20230108211747.png)
 
 ## 2. 修复分离的HEAD
 
@@ -46,18 +48,19 @@ git chekcout main
 
 - 也就是说，分离的`HEAD`是一个更加新的`commit`
 - 比如下图，想要把`2fe389`移动到`0eb71c`后面，成为`test-revert-branch`分支的一部分
-![image.png|950](https://img-20221128.oss-cn-shanghai.aliyuncs.com/img-2022-11/20230209202205.png)
+  ![image.png|950](https://img-20221128.oss-cn-shanghai.aliyuncs.com/img-2022-11/20230209202205.png)
 - 如果直接`checkout test-revert-branch`，那么`2fe`的`commit`会丢失
 - 因此，需要临时起一个新的分支
 
 ```shell
-# 临时起一个分支tmp 
+# 临时起一个分支tmp
 # 用来放2fe对应的commit
 # 完成之后再删掉
-git branch tmp 
+git branch tmp
 ```
 
 ![image.png|850](https://img-20221128.oss-cn-shanghai.aliyuncs.com/img-2022-11/20230209202649.png)
+
 - 此后，执行`checkout`和`merge`操作
 
 ```shell
@@ -70,7 +73,7 @@ git checkout tmp
 git checkout test-revert-branch
 
 # 合并两个分支
-# 将tmp merge到当前分支上面 
+# 将tmp merge到当前分支上面
 git merge tmp
 
 # 删除tmp

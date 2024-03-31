@@ -6,9 +6,9 @@ date created: 2023-05-09
 date updated: 2022-12-07 23:10
 description: info
 tags:
+  - Blog
   - interview
   - network
-  - Blog
 title: 计算机网络-DNS的递归查询和迭代查询
 url: https://www.yuque.com/albert-tdjyy/bp5vz7/ngqbk6
 ---
@@ -16,6 +16,7 @@ url: https://www.yuque.com/albert-tdjyy/bp5vz7/ngqbk6
 # 计算机网络-DNS的递归查询和迭代查询
 
 > [!note]
+>
 > - [【每日一题】- 2020-04-03 - DNS查询是递归查询还是迭代查询？ · Issue #108 · azl397985856/fe-interview · GitHub](https://github.com/azl397985856/fe-interview/issues/108)
 
 - 整体流程如下所示：
@@ -36,16 +37,16 @@ url: https://www.yuque.com/albert-tdjyy/bp5vz7/ngqbk6
 
 ## 1. 名词的解释
 
-- *本地 DNS 服务器*：这里的本地不是严格意义上的本地，通常是 `ISP` 或者一些公共服务商，比如说 `cloudfare` 的 `1.1.1.1`，`Google` 的 `8.8.8.8`，一般可以在 `/etc/network/resolv.conf` 当中进行配置。
-- *根 DNS 服务器*：最顶层的 `DNS` 服务器，负责管理 *顶级 DNS 服务器*，也就是**解析 `.com/.cn` 之类的顶级域名对应的地址**。
-- *顶级 DNS 服务器*：次顶层的 `DNS` 服务，**负责解析其域名下所有的二级域名信息**。二级域名一般就是我们购买的域名，比如 `baidu/google` 之类的。
-- *权限域名服务器*：第三层的域名服务器，负责解析具体的 `URL` 对应的所有的 `DNS` 信息。
+- _本地 DNS 服务器_：这里的本地不是严格意义上的本地，通常是 `ISP` 或者一些公共服务商，比如说 `cloudfare` 的 `1.1.1.1`，`Google` 的 `8.8.8.8`，一般可以在 `/etc/network/resolv.conf` 当中进行配置。
+- _根 DNS 服务器_：最顶层的 `DNS` 服务器，负责管理 _顶级 DNS 服务器_，也就是**解析 `.com/.cn` 之类的顶级域名对应的地址**。
+- _顶级 DNS 服务器_：次顶层的 `DNS` 服务，**负责解析其域名下所有的二级域名信息**。二级域名一般就是我们购买的域名，比如 `baidu/google` 之类的。
+- _权限域名服务器_：第三层的域名服务器，负责解析具体的 `URL` 对应的所有的 `DNS` 信息。
 
 ## 2. 递归查询
 
 - 主机向*本地域名服务器*的查询一般都是采用递归查询
 - 如果主机所询问的本地域名服务器不知道被查询的域名的IP地址，那么本地域名服务器就以DNS客户的身份，向*其它根域名服务器*继续发出查询请求报文(即替主机继续查询)，而不是让主机自己进行下一步查询。
-- 因此，递归查询返回的查询结果或者是所要查询的IP地址，或者是报错，表示无法查询到所需的IP地址。 
+- 因此，递归查询返回的查询结果或者是所要查询的IP地址，或者是报错，表示无法查询到所需的IP地址。
 
 ## 3. 迭代查询
 

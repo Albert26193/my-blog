@@ -16,6 +16,7 @@ notionID: 82488e3e-b82f-47cd-990c-dec78c14bac1
 # Linux-Tmux操作备忘录
 
 > [!info]
+>
 > - https://www.ruanyifeng.com/blog/2019/10/tmux.html
 > - https://yangfangs.github.io/wiki/2020-4-12-tmux-shortcut-key
 

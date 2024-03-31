@@ -4,9 +4,9 @@ date: 2024-03-03
 date created: 2023-05-09
 date updated: 2023-02-27 18:12
 tags:
+  - Blog
   - Linux
   - bash编程
-  - Blog
 title: Linux-bash脚本如何将一行命令拆到多行
 ---
 

@@ -43,7 +43,7 @@ tmux join-pane -s :3.1
 tmux join-pane -t :4
 ```
 
-- `join-pane -t` 当中的 `t` 是 `target` 的意思，指将当前 `pane` 放到  `target` 指定的 `window` 当中去。 
+- `join-pane -t` 当中的 `t` 是 `target` 的意思，指将当前 `pane` 放到 `target` 指定的 `window` 当中去。
 
 ### 2.3 将当前 `pane` 和同一 `window` 中的 `pane 2` 交换
 
@@ -59,7 +59,7 @@ tmux swap-pane -t 2
 tmux break-pane -t :
 ```
 
-- ` : ` 省略参数表示默认开一个新窗口
+- `:` 省略参数表示默认开一个新窗口
 - 也可以指定具体的窗口号，比如 `:8`，就是将当前 `pane` 移动到全新 `window 8` 当中去
 
 ## 3. 窗格操作总结

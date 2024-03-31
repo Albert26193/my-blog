@@ -5,6 +5,7 @@ date created: 2023-10-20
 date updated: 2023-10-20 13:10
 description: info
 tags:
+  - Blog
   - interview
   - back-end
   - Go
@@ -13,8 +14,7 @@ title: Go-Defer是什么
 
 # Go-Defer是什么
 
-> [!citaion]
-> `defer` 关键字的调用时机以及多次调用 `defer` 时执行顺序是如何确定的
+> [!citaion] > `defer` 关键字的调用时机以及多次调用 `defer` 时执行顺序是如何确定的
 
 ## 1. 什么是 `defer`
 
@@ -36,13 +36,14 @@ title: Go-Defer是什么
 
 ---
 
-- 归根结底就是一句话：***`defer` 本质上就是一道保险，确保资源在异常状态下不至于泄漏。***
+- 归根结底就是一句话：**_`defer` 本质上就是一道保险，确保资源在异常状态下不至于泄漏。_**
 
 ## 2. `defer` 执行顺序
 
 - `defer` 的调用顺序，类似于堆栈结构，遵循先进后出 `First In Last Out` 的顺序。
 - `defer` 只有在函数即将退出之前才会被压入堆栈，然后执行。
-- `defer`  **在 `return` 语句执行之后才会执行。**
+- `defer` **在 `return` 语句执行之后才会执行。**
+
 ---
 
 - 比如下面的代码
@@ -102,7 +103,9 @@ func PreCalCulate() {
 
 - 其输出结果非常小，为 `0` 或者 `xxx ns`，可以认为是瞬间执行的。
 - 因为执行到 `defer` 所在语句的时候，传入了 `time.Since(startedAt)` 的“值”，也就是当场会进行计算。
+
 ---
+
 - 如何解决这个问题？
 - 向 `defer` 关键字传入**匿名函数**，比如
 - 其作用原理类似于回调，函数体会被当场传入，但是在最终退出 `main` 函数的时候，才会被调用。
@@ -111,7 +114,7 @@ func PreCalCulate() {
 func main() {
 	startedAt := time.Now()
 	defer func() { fmt.Println(time.Since(startedAt)) }()
-	
+
 	time.Sleep(time.Second)
 }
 ```
