@@ -6,7 +6,6 @@ date created: 2023-05-09
 date updated: 2023-06-08 23:01
 description: Linux基本的目录结构
 tags:
-  - Blog
   - Linux
 title: Linux-Linux目录结构
 ---

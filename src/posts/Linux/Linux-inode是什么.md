@@ -7,7 +7,6 @@ description: Linux基本常识
 link: https://www.notion.so/Linux-inode-fe5ea5d9e0f347aab744d13755c95279
 notionID: fe5ea5d9-e0f3-47aa-b744-d13755c95279
 tags:
-  - Blog
   - Linux
 title: Linux-inode是什么
 ---
@@ -40,25 +39,22 @@ title: Linux-inode是什么
 - 在格式化的时候，`inode`号码的总量就确定下来了（那是肯定的，因为需要划分`inode`区域的大小
 - 存在一种情况，硬盘没有满，但是`inode`号已经用光了，那样文件也没办法存进去了。
 - `df -i`查看硬盘的`inode`分配情况
-  ![image.png](https://img-20221128.oss-cn-shanghai.aliyuncs.com/img-2022-11/20230207140131.png)
-
+![image.png](https://img-20221128.oss-cn-shanghai.aliyuncs.com/img-2022-11/20230207140131.png)
 ---
 
 ### 3.2 目录的设计
 
 ![image.png|500](https://img-20221128.oss-cn-shanghai.aliyuncs.com/img-2022-11/20230207140943.png)
-
 - 目录（directory）通过多个目录项（dirent）构成
 - dirent = 子文件文件名 + 子文件`inode`号
 - `ls -i .`列出当前目录下的文件`inode`分配情况
-  ![image.png|550](https://img-20221128.oss-cn-shanghai.aliyuncs.com/img-2022-11/20230207141220.png)
+![image.png|550](https://img-20221128.oss-cn-shanghai.aliyuncs.com/img-2022-11/20230207141220.png)
 
 ---
 
 ### 3.3 inode 数据结构的设计
 
 - 文件的字节数
-
   - 文件拥有者的User ID
   - 文件的Group ID
   - 文件的读、写、执行权限
@@ -66,19 +62,19 @@ title: Linux-inode是什么
   - 文件数据block的位置
 
 - 利用`stat`查看文件的`inode`信息
-  ![image.png](https://img-20221128.oss-cn-shanghai.aliyuncs.com/img-2022-11/20230207141259.png)
+![image.png](https://img-20221128.oss-cn-shanghai.aliyuncs.com/img-2022-11/20230207141259.png)
 
 ## 4. inode和软硬连接
 
 - 软链接：
-
   - 相当于一个全新的文件，只不过这个文件里面的`block`，存放的是指向另外一个文件的`inode`的链接（类似于快捷方式）
   - soft link 就是 symbolic link
   - 软链接对于它指向的文件其实是有依赖关系的
 
-- 硬链接：
-- 在源文件的`inode`块上面，重新添加一个链接（源文件`inode`链接数 + 1）
-- 类似于源文件的“马甲”，“别名”，比如大名叫王大毛，小名叫王狗子，其实是同一个人（同一个`inode`块，也是同一个block）
-- 如果`inode`链接数为`0`，那么系统就会回收文件的物理存储`block`，等于删除了文件
-
+-  硬链接：
+  - 在源文件的`inode`块上面，重新添加一个链接（源文件`inode`链接数 + 1）
+  - 类似于源文件的“马甲”，“别名”，比如大名叫王大毛，小名叫王狗子，其实是同一个人（同一个`inode`块，也是同一个block）
+  - 如果`inode`链接数为`0`，那么系统就会回收文件的物理存储`block`，等于删除了文件
+  
 ![image.png|650](https://img-20221128.oss-cn-shanghai.aliyuncs.com/img-2022-11/20230207134641.png)
+

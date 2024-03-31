@@ -5,7 +5,6 @@ date created: 2023-05-09
 date updated: 2023-06-09 15:10
 description: Linux常用命令
 tags:
-  - Blog
   - Linux
 title: Linux-利用nohup查看实时输出
 ---
@@ -13,16 +12,15 @@ title: Linux-利用nohup查看实时输出
 # Linux-利用nohup查看实时输出
 
 > [!info]
->
 > - https://www.cnblogs.com/zouhong/p/12191196.html
 > - https://www.cnblogs.com/yychuyu/p/13159338.html
 
-在工作中，我们很经常跑一个很重要的程序，有时候这个程序需要跑好几个小时，甚至需要几天，这个时候如果我们退出终端，或者网络不好连接中断，那么程序就会被中止。而这个情况肯定不是我们想看到的，我们希望即使终端关闭，程序依然可以在跑。
+ 在工作中，我们很经常跑一个很重要的程序，有时候这个程序需要跑好几个小时，甚至需要几天，这个时候如果我们退出终端，或者网络不好连接中断，那么程序就会被中止。而这个情况肯定不是我们想看到的，我们希望即使终端关闭，程序依然可以在跑。
 
 ## 1. 什么是 nohup
 
 - `nohup` 就是 no hang up
-- `nohup` 会忽略 _所有的中断信号_
+- `nohup` 会忽略 *所有的中断信号*
 - `nohup` 可以使得命令永久运行下去，并且将其输出写入（或追加）到当前目录下的 `nohup.out` 文件当中
 - 比如用 `ssh` 接入一个远程服务器，希望退出 `ssh` 之后，程序依然执行，那么就可以使用 `nohup` 命令
 - 起两个作用：
@@ -41,7 +39,6 @@ title: Linux-利用nohup查看实时输出
 - `tail -f`：不断追加，实现实时查看的效果
 
 ![image.png](https://img-20221128.oss-cn-shanghai.aliyuncs.com/img-2022-11/20230209175735.png)
-
 - 结合 `nohup`
 
 ```shell

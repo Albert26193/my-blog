@@ -4,32 +4,29 @@ category: CS-基础
 date: 2024-02-22
 date created: 2023-05-09
 date updated: 2023-04-23 20:28
+description: info
 link: https://www.notion.so/TCP-8e3dc5fa358d400a90b965c6b41dea49
 notionID: 8e3dc5fa-358d-400a-90b9-65c6b41dea49
 tags:
-  - Blog
   - interview
   - network
 title: 计算机网络-TCP连接的三次握手
 ---
 
-
 # 计算机网络-TCP连接的三次握手
 
 ## 1. ISN
 
-- 在建立连接之初，通信双方都会各自选择一个序列号，称之为初始序列号。在建立连接时，通信双方通过 SYN 报文交换彼此的 ISN，如下图所示
-  ![image.png](https://img-20221128.oss-cn-shanghai.aliyuncs.com/img-2022-11/20230414183203.png)
+- 在建立连接之初，通信双方都会各自选择一个序列号，称之为初始序列号。在建立连接时，通信双方通过 SYN 报文交换彼此的 ISN，如下图所示 
+![image.png](https://img-20221128.oss-cn-shanghai.aliyuncs.com/img-2022-11/20230414183203.png)
 
 ## 2. SYN报文交换
 
 ![image.png](https://img-20221128.oss-cn-shanghai.aliyuncs.com/img-2022-11/20230414183420.png)
 
 - 其中第 2 步和第 3 步可以合并一起，这就是三次握手的过程
-  ![image.png](https://img-20221128.oss-cn-shanghai.aliyuncs.com/img-2022-11/20230414183449.png)
-
+![image.png](https://img-20221128.oss-cn-shanghai.aliyuncs.com/img-2022-11/20230414183449.png)
 ---
-
 ![image.png](https://img-20221128.oss-cn-shanghai.aliyuncs.com/img-2022-11/20230421155336.png)
 
 ## 3. 实例
@@ -70,16 +67,15 @@ title: 计算机网络-TCP连接的三次握手
 
 - 目标ip地址是`180.101.50.242`
 - 实际抓包的过程如下图所示：
-  ![image.png](https://img-20221128.oss-cn-shanghai.aliyuncs.com/img-2022-11/20230423183556.png)
+![image.png](https://img-20221128.oss-cn-shanghai.aliyuncs.com/img-2022-11/20230423183556.png)
 - 过滤规则如下：`(ip.dst == 180.101.50.242 or ip.src == 180.101.50.242)`
 
 ### 第一次握手
 
 - 客户端向服务端发起请求
-
   - 告诉服务端自己的`ISN`，也就是初始序列号
   - 发送给服务端的此条消息中，`Flags`标志位当中的`SYN`bit是`1`，表示这是一条希望二者建立连接的请求。
-    ![image.png](https://img-20221128.oss-cn-shanghai.aliyuncs.com/img-2022-11/20230423184039.png)
+![image.png](https://img-20221128.oss-cn-shanghai.aliyuncs.com/img-2022-11/20230423184039.png)
 
 - 上图中不难看出：
   - 客户端`ISN`: 1916984173
@@ -91,7 +87,7 @@ title: 计算机网络-TCP连接的三次握手
   - 告诉客户端，自己确实已经收到了来自客户端的请求，凭证就是能说出`ACK`号
   - 告诉客户端，自己的`ISN`，也就是初始序列号
   - 服务端发送的此条消息，其`SYN`比特也是`1`，等于告诉客户端，**我们现在还处在建立连接的阶段**
-    ![image.png](https://img-20221128.oss-cn-shanghai.aliyuncs.com/img-2022-11/20230423184841.png)
+![image.png](https://img-20221128.oss-cn-shanghai.aliyuncs.com/img-2022-11/20230423184841.png)
 - 上图中不难看出
   - 确实已经收到了客户端的`SYN`请求了，凭据就是其`ACK`为 1916984173 + 1（表示在此之前的全部都收到了)
   - 服务端`ISN`为 1650034095
@@ -100,7 +96,7 @@ title: 计算机网络-TCP连接的三次握手
 ## 第三次握手
 
 - 客户端告诉服务端，自己已经收到了来自第二次握手的全部信息了，凭证就是其`ACK`号
-  ![image.png](https://img-20221128.oss-cn-shanghai.aliyuncs.com/img-2022-11/20230423185254.png)
+![image.png](https://img-20221128.oss-cn-shanghai.aliyuncs.com/img-2022-11/20230423185254.png)
 - 上图中不难看出，确实已经收到了来自 客户端的 `seq`序列号了
 
 ## 5. 双方所处的状态

@@ -5,7 +5,6 @@ date created: 2023-05-09
 date updated: 2023-10-10 14155 20:19
 description: JS基础知识
 tags:
-  - Blog
   - JS
   - interview
 title: JS-闭包面试题
@@ -13,9 +12,9 @@ title: JS-闭包面试题
 
 # JS-闭包面试题
 
-## 1. question-1
+## 1.  question-1
 
-> 【闭包【JS面试题】】 https://www.bilibili.com/video/BV1jV411H7Pi/?share_source=copy_web&vd_source=eeddb1cedc60b3f7a4bdeeffebc5d786
+>  【闭包【JS面试题】】 https://www.bilibili.com/video/BV1jV411H7Pi/?share_source=copy_web&vd_source=eeddb1cedc60b3f7a4bdeeffebc5d786
 
 - 什么是闭包？
   - 闭包就是一个函数和它周围状态的引用捆绑在一起的组合。
@@ -23,15 +22,15 @@ title: JS-闭包面试题
 
 ```js
 function test() {
-  const a = 1
-  return function () {
-    console.log('a', a)
+  const a = 1;
+  return function() {
+    console.log('a', a);
   }
 }
 
-const fn = test()
-const a = 2
-fn()
+const fn = test();
+const a = 2;
+fn();
 ```
 
 - 答案：`logs: a 1` ，因为返回值函数当中的`a`，按照作用域链[[../原型链/JS-作用域链]]，具有3个变量对象。
@@ -48,13 +47,13 @@ fn()
 
 ```js
 function test(fn) {
-  const a = 1
-  fn()
+  const a = 1;
+  fn();
 }
 
-const a = 2
+const a = 2;
 function fn() {
-  console.log('a', a)
+  console.log('a', a);
 }
 ```
 

@@ -5,7 +5,6 @@ date created: 2023-08-08
 date updated: 2023-08-13 11:53
 description: Linux常用命令
 tags:
-  - Blog
   - Linux
   - Command
 title: Linux-awk实践案例
@@ -49,7 +48,7 @@ END {
 - `words_records` 类似全局变量，每执行一行，就记录一次
 - `$` 可以理解成一个运算符，取出对应列当中的内容
 
-## 2. 按照类型切分 `netstat.txt`
+## 2. 按照类型切分 `netstat.txt` 
 
 ```sh
 #!/usr/bin/awk
@@ -70,10 +69,10 @@ NR != 1 {
 ## 3. 打印 `ls -al` 的结果
 
 - 在 `mac` 系统下，执行 `ls -al` 结果如下：
-  ![image.png](https://img-20221128.oss-cn-shanghai.aliyuncs.com/img-2023-05/20230920193547.png)
+![image.png](https://img-20221128.oss-cn-shanghai.aliyuncs.com/img-2023-05/20230920193547.png)
 
 - 利用 `awk` 打印最后一列，结果如下：
-  ![image.png](https://img-20221128.oss-cn-shanghai.aliyuncs.com/img-2023-05/20230920194208.png)
+![image.png](https://img-20221128.oss-cn-shanghai.aliyuncs.com/img-2023-05/20230920194208.png)
 
 ---
 

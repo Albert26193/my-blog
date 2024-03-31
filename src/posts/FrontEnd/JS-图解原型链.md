@@ -5,11 +5,11 @@ date created: 2023-06-21 22:01
 date updated: 2023-07-12 12:07
 description: JS基础知识
 tags:
-  - Blog
   - JS
   - front-end
 title: JS-图解原型链
 ---
+
 
 # JS-图解原型链
 
@@ -18,20 +18,21 @@ title: JS-图解原型链
 ```js
 // constructor
 function Box(value) {
-  this.value = value
+	this.value = value;
 }
 
 Box.prototype.getValue = function () {
-  return this.value
-}
+	return this.value;
+};
 
-const myBox = new Box(42)
+
+const myBox = new Box(42);
 ```
 
 - 构造函数的 `prototype` 等于 实例化对象的 `__proto__`
 - 也就是说 `myBox.__proto__` 等于 `Box.prototype`
 - 其原型链如下所示
-  ![image.png](https://img-20221128.oss-cn-shanghai.aliyuncs.com/img-2023-05/20230621220441.png)
+![image.png](https://img-20221128.oss-cn-shanghai.aliyuncs.com/img-2023-05/20230621220441.png)
 
 - **所谓 A.prototype，就是“由构造函数 A 创建的所有对象实例共享的原型"，这个原型存储在 A.prototype中。** 关键!
 

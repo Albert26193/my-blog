@@ -7,13 +7,12 @@ description: 运维过程当中的一些实践，作为备忘录使用。
 link: https://www.notion.so/CS-Linux-6b432a1b3
 notionID: 6b432a1b-3569-4043-a3ff-b56ce5fd9916
 tags:
-  - Blog
   - Linux
   - 运维备忘录
-title: Linux-服务器重装备忘录
+title: CS-Linux服务器重装备忘录
 ---
 
-# Linux-服务器重装备忘录
+# CS-Linux服务器重装备忘录
 
 ## 1. 前置 Misc 操作
 
@@ -120,7 +119,6 @@ cp ./id_rsa ../install_tmp
 ```
 
 - 这一步完成之后，即可回到实验室，不用留在机房里面了 🍺
-
 ---
 
 ## 6. 修改 `DNS` 服务器
@@ -164,13 +162,13 @@ deb-src https://mirrors.aliyun.com/debian/ bookworm-backports main non-free non-
 
 - 执行升级命令
 
-```sh
-#root
-apt-get update && apt-get upgrade
+ ```sh
+ #root
+ apt-get update && apt-get upgrade
 
 # 安装必要软件
 apt-get install tmux zsh vim neofetch git sudo curl rsync duf zip unzip screen fzf fd-find
-```
+ ```
 
 ---
 
@@ -184,14 +182,13 @@ update-alternatives --config editor
 ```
 
 - 编辑 `visudo`，禁用特定用户的特定权限
-
 ---
 
 ## 9. 配置 `installer` 用户的 `ssh-key`
 
 - 结合 `onekey_zsh` 脚本
 
-## 10. 设置时钟同步
+## 10. 设置时钟同步 
 
 - 硬件时钟矫正 `hwclock`
 - 设置时间 `date` 和 `hwclock` 同步
@@ -203,7 +200,6 @@ update-alternatives --config editor
 - 修改时间为 `24小时`
 
 ---
-
 - 重新加载守护进程配置文件
 
 ```sh

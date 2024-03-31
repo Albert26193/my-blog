@@ -3,9 +3,8 @@ author: Albert
 date: 2024-02-23
 date created: 2023-05-09
 date updated: 2023-04-26 17:52
-
+description: info
 tags:
-  - Blog
   - network
   - interview
 title: 计算机网络-TCP拥塞控制Reno算法
@@ -13,9 +12,8 @@ title: 计算机网络-TCP拥塞控制Reno算法
 
 # 计算机网络-TCP拥塞控制Reno算法
 
-> [!tip]
->
-> - [4.2 TCP 重传、滑动窗口、流量控制、拥塞控制 | 小林coding](https://xiaolincoding.com/network/3_tcp/tcp_feature.html#%E6%85%A2%E5%90%AF%E5%8A%A8)
+>[!tip]
+>cite: [4.2 TCP 重传、滑动窗口、流量控制、拥塞控制 | 小林coding](https://xiaolincoding.com/network/3_tcp/tcp_feature.html#%E6%85%A2%E5%90%AF%E5%8A%A8)
 
 ## 1. 概览
 
@@ -72,7 +70,6 @@ title: 计算机网络-TCP拥塞控制Reno算法
 - 进入快速恢复之前，`cwnd` 和 `ssthresh` 已被更新了：
 - `cwnd` = `cwnd/2` ，也就是设置为原来的一半;
 - `ssthresh` = `cwnd`;
-
 ---
 
 ![image.png](https://img-20221128.oss-cn-shanghai.aliyuncs.com/img-2023-05/20240223002018.png)

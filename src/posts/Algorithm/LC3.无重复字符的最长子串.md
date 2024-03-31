@@ -4,9 +4,8 @@ category: CS-算法
 date: 2024-02-22
 date created: 2023-05-09
 date updated: 2022-12-07 23:10
-description: 经典的滑动窗口题目，是一道模板题。
+description: info
 tags:
-  - Blog
   - 模板题
   - leetcode
   - algorithm
@@ -14,9 +13,10 @@ tags:
 title: LC3.无重复字符的最长子串
 ---
 
+
 # LC3.无重复字符的最长子串
 
-![image.png](http://img-blog-01.oss-cn-shanghai.aliyuncs.com/img/2022-11-27-192755.png)
+![image.png](http://img-blog-01.oss-cn-shanghai.aliyuncs.com/img/2022-11-27-192755.png) 
 
 ## 思路：滑动窗口 + 哈希表
 
@@ -24,7 +24,7 @@ title: LC3.无重复字符的最长子串
 如果：
 
 1. 发现右指针所指向的位置没有出现过，那么将右指针指向的位置放入哈希表中。继续右移，直到到达终点。
-2. 如果右指针指向的位置出现过，那么将左指针指向的位置擦除。不断重复，直到右指针指向的元素在哈希表中不存在。
+2. 如果右指针指向的位置出现过，那么将左指针指向的位置擦除。不断重复，直到右指针指向的元素在哈希表中不存在。 
 
 ## 代码
 

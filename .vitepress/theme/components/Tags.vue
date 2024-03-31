@@ -91,7 +91,7 @@ const toggleTag = (tag: string) => {
   border: 1px solid var(--vp-c-brand);
   color: var(--vp-c-brand);
   box-sizing: border-box;
-  font-weight: 900;
+  font-weight: 600;
 }
 
 .tags .tag.active .count {

@@ -49,7 +49,13 @@ export default defineConfig({
   } as any,
   srcExclude: ['README.md'], // exclude the README.md , needn't to compiler
   vite: {
-    //build: { minify: false }
+    /*
+    build: {
+      rollupOptions: {
+        external: ['vue/server-renderer', 'vue']
+      }
+    },
+    */
     server: { port: 5000 },
     plugins: [UnoCSS()]
   }

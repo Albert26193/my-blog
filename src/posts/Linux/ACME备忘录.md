@@ -5,18 +5,17 @@ date created: 2023-12-25
 date updated: 2023-12-20 20:53
 description: 运维过程当中的一些实践，作为备忘录使用。
 tags:
-  - Blog
   - Linux
   - 运维备忘录
-title: Linux-ACME备忘录
+title: ACME备忘录
 ---
 
-# Linux-ACME备忘录
+# ACME备忘录
 
 ## 1. 生成密钥
 
 - 建议全程使用 `root` 用户操作，防止环境变量出错
-- 用 `DNS` 方式添加 `key` 如下：
+ - 用 `DNS` 方式添加 `key` 如下：
 
 ```shell
 export Ali_Key=xxxxxxxxxxxxxx
@@ -25,7 +24,7 @@ export Ali_Screct=xxxxxxxxxxxxxxx
 ./acme.sh --issue --dns dns_ali -d lab-server.cn -d www.lab-server.cn -d monitor.lab-server.cn -d *.lab-server.cn
 ```
 
-- 如果 `Ali_Key` 没有读到，请手动添加到 `account.conf` 当中
+- 如果 `Ali_Key`  没有读到，请手动添加到 `account.conf` 当中
 
 ```shell
 root@Debian-7302:~/.acme.sh# cat account.conf
@@ -53,12 +52,9 @@ USER_PATH='/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin'
 - 生成了 4 个文件， 实际上需要在 `nginx` 当中使用的是两个
 
 ![image.png](https://img-20221128.oss-cn-shanghai.aliyuncs.com/img-2023-05/20231220220155.png)
-
 1. `fullchain.cer`
 2. `finance.albert.cool.key`
-
 ---
-
 - 这两个文件需要拷贝到 `/etc/nginx/ssl` 目录当中
 
 ```shell

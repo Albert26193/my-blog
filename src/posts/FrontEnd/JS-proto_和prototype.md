@@ -4,17 +4,16 @@ category: CS-前端
 date: 2024-02-22
 date created: 2023-05-09
 date updated: 2023-10-10 14:51
-
+description: info
 tags:
-  - Blog
   - JS
   - front-end
 title: JS-proto_和prototype
 ---
 
-# JS-proto\_和prototype
+# JS-proto_和prototype
 
-> !tip: <https://github.com/creeperyang/blog/issues/9>
+> cite: <https://github.com/creeperyang/blog/issues/9>
 
 ## 1. `__proto__`
 
@@ -22,8 +21,8 @@ title: JS-proto_和prototype
 - 对象的`__proto__`属性的值就是它对应的原型对象
 
 ```javascript
-var one = { x: 1 }
-var two = new Object()
+var one = {x: 1};
+var two = new Object();
 one.__proto__ === Object.prototype // true
 two.__proto__ === Object.prototype // true
 one.toString === one.__proto__.toString // true

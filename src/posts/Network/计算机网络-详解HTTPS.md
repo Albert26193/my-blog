@@ -1,22 +1,20 @@
 ---
 author: Albert
 category: CS-基础
-date: 2024-02-22
+date: 2024-03-05
 date created: 2023-05-09
 date updated: 2024-02-10 10:06
 description: 计算机网络常识
 tags:
-  - Blog
   - network
   - interview
+  - Blog
 title: 计算机网络-详解HTTPS
 ---
 
 # 计算机网络-详解HTTPS
 
-> [!info]
->
-> - [How does HTTPS work? (Episode 6) - by Alex Xu](https://blog.bytebytego.com/p/how-does-https-work-episode-6)
+> [How does HTTPS work? (Episode 6) - by Alex Xu](https://blog.bytebytego.com/p/how-does-https-work-episode-6)
 
 ## 1. HTTPS 工作流程
 
@@ -25,16 +23,14 @@ title: 计算机网络-详解HTTPS
 - 整体而言可以分成4个阶段：
   1. TCP握手
   2. 证书检查
-  3. 秘钥交换
+  3. 秘钥交换 
   4. 数据传输
 
 ### 1.1 前置概念
 
 - `HTTPS` 的传输使用了对称加密和非对称加密
 - 其中， *非对称加密*是服务于*对称加密*的。因为对称加密过程中，加密、解密的速度相对快，所以对于体积较大的通信数据，考虑使用*对称加密*。但是对称加密的秘钥的分发和管理比较繁琐，因此，需要用**非对称加密来传输对称加密需要用的的秘钥。**
-
 ---
-
 - 对称加密
   - 常见算法：DES、AES
   - 加密解密使用同一个秘钥
@@ -42,9 +38,7 @@ title: 计算机网络-详解HTTPS
   - 劣势：
     - 通信双方需要使用同一个秘钥，且秘钥无法被第三方得知。秘钥的数量增长很快。
     - 如果通信环境本身是不安全的，那么在传输过程中可能泄露秘钥，存在安全隐患。
-
 ---
-
 - 非对称加密
   - 常见算法：RSA、ECC
   - 交互过程中使用一对秘钥，私钥用来加密解密，公钥在网络当中传输。
@@ -54,6 +48,25 @@ title: 计算机网络-详解HTTPS
 ![image.png|475](https://img-20221128.oss-cn-shanghai.aliyuncs.com/img-2023-05/20230915153340.png)
 
 ### 1.2 具体流程
+
+![image.png|450](https://img-20221128.oss-cn-shanghai.aliyuncs.com/img-2023-05/20240305141435.png)
+
+这张图片展示的是一个TLS（传输层安全协议）使用RSA密钥交换的握手过程的流程图。TLS协议用于在客户端和服务器之间提供一个安全的通信渠道。这个流程图使用了不同的颜色和块来区分不同的步骤，其中包括：
+
+1. **ClientHello** (蓝色块): 客户端向服务器发送一个ClientHello消息，表明它希望开始TLS通信。这个消息包括：
+   - TLS版本号
+   - 客户端生成的随机数（Client Random）
+   - 客户端支持的密码套件列表
+2. **ServerHello** (绿色块): 服务器收到ClientHello后，回复一个ServerHello消息，内容包括：
+   - 服务器选择的TLS版本号
+   - 服务器生成的随机数（Server Random）
+   - 服务器选择的密码套件，这里指定了ECDHE_RSA，表示椭圆曲线迪菲-赫尔曼密钥交换和RSA签名
+3. **Certificate** (绿色块): 服务器发送它的证书给客户端，证书中包含了服务器的公钥。
+4. **ServerHelloDone** (绿色块): 服务器告诉客户端它已经完成了Hello消息的发送。
+5. **ClientKeyExchange** (蓝色块): 客户端回复一个ClientKeyExchange消息，发送用服务器公钥加密的预主密钥。
+6. **ChangeCipherSpec** (蓝色和绿色块): 客户端和服务器都发送ChangeCipherSpec消息，告知对方接下来将使用协商的密码套件和密钥来加密消息。
+7. **Finished** (蓝色和绿色块): 握手完成后，客户端和服务器交换Finished消息，验证握手过程。
+8. **Application Data** (棕色块): 握手过程完成后，客户端和服务器开始安全地交换应用数据。
 
 #### 1.2.1 TCP握手
 
@@ -90,10 +103,9 @@ title: 计算机网络-详解HTTPS
 
 - 以上过程的 `ai` 总结如下：
 
-> [!note]
+> [!Ai]
 > HTTPS的加密过程涉及到一个名为SSL/TLS握手的过程，该过程的目的是在客户端和服务器之间建立一个安全的连接。以下是这个过程的简化版步骤：
->
-> 1. **客户端向服务器发送“Client hello”消息**：这个消息中包含了客户端支持的SSL/TLS版本，可用的加密算法（称为“密码套件”），以及一个客户端生成的随机数（Client Random）。
+>1. **客户端向服务器发送“Client hello”消息**：这个消息中包含了客户端支持的SSL/TLS版本，可用的加密算法（称为“密码套件”），以及一个客户端生成的随机数（Client Random）。
 > 2. **服务器向客户端发送“Server hello”消息**：服务器在客户端提供的密码套件中选择一套它也支持的算法，并生成它自己的一个随机数（Server Random）。服务器还会将它的CA证书（包含服务器的公钥和一些身份信息）发送给客户端。
 > 3. **客户端验证服务器证书**：客户端会验证服务器的证书是否由它信任的CA签发，证书是否在有效期内，以及证书的主题是否匹配服务器的地址。证书验证失败的话，通常会在浏览器中显示一个警告。
 > 4. **客户端生成预主秘钥并加密**：如果证书验证成功，客户端会生成一个新的随机数，这个随机数被称为“预主密钥”（Pre-Master Secret）。客户端使用服务器的公钥对这个预主密钥进行加密，然后将其发送给服务器。

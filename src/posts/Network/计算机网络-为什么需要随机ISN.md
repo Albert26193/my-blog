@@ -5,7 +5,6 @@ date created: 2023-12-01
 date updated: 2024-01-04 15:39
 description: 计算机网络常识
 tags:
-  - Blog
   - interview
   - network
 title: 计算机网络-为什么需要随机ISN
@@ -37,3 +36,4 @@ title: 计算机网络-为什么需要随机ISN
 ![image.png|475](https://img-20221128.oss-cn-shanghai.aliyuncs.com/img-2023-05/20231201171331.png)
 
 - 如果进行了随机化，那么，**历史的报文就很难落到滑动窗口当中，几乎不可能出现错乱**
+

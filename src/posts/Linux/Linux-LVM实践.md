@@ -5,7 +5,6 @@ date created: 2023-07-21
 date updated: 2023-07-29 21:09
 description: 运维过程当中的一些实践，作为备忘录使用。
 tags:
-  - Blog
   - Linux
   - 运维备忘录
 title: Linux-LVM 实践
@@ -16,7 +15,7 @@ title: Linux-LVM 实践
 ## 1. 场景
 
 - 远程服务器安装盘不合理，其挂载方式如下图所示：
-  ![image.png|475](https://img-20221128.oss-cn-shanghai.aliyuncs.com/img-2023-05/20230729194554.png)
+![image.png|475](https://img-20221128.oss-cn-shanghai.aliyuncs.com/img-2023-05/20230729194554.png)
 
 - `/` 目录的挂载点空间过大，只有两个 `500G` 的硬盘可以挂载 `/home` 目录
 - 希望将两个独立的 `500G` 的物理磁盘合并成一个 `vg`（卷组），然后划分全部空间作为`lv`（逻辑卷），用以挂载 `/home`。
@@ -28,17 +27,15 @@ title: Linux-LVM 实践
 - `fdisk /dev/sda`
 - `n` 建立分区
 - `t` 修改分区类型
-- `8E` `Linux LVM type`
-  ![image.png](https://img-20221128.oss-cn-shanghai.aliyuncs.com/img-2023-05/20230729195849.png)
+- `8E` `Linux LVM type` 
+![image.png](https://img-20221128.oss-cn-shanghai.aliyuncs.com/img-2023-05/20230729195849.png)
 - `/dev/sdb` 可以进行同理操作，修改其磁盘分区类型
 
 ### 2.2 制作两个 `pv`（物理卷）
 
 - [[Linux-LVM学习]]
 - [[Linux-关于fdisk命令]]
-
 ---
-
 - `pvcreate /dev/sdxxx` 创建逻辑卷
 
 ```sh
@@ -52,7 +49,6 @@ pvcreate /dev/sdc1
 ```
 
 ---
-
 - 查看对应的逻辑卷状态
   - `pvs` 简略版，类似树形结构给予呈现
   - `pvdisplay` 详细版，详细打印
@@ -80,14 +76,10 @@ vgcreate volume-group-1 /dev/sda1 /dev/sdc1
 - `-L` 指定大小为 `999G`
 - `-n` 指定名称为 `for_home`
 - `volume-group-1`
-
 ---
-
 - `lvs` 或者 `lvdisplay` 展示
-  ![image.png](https://img-20221128.oss-cn-shanghai.aliyuncs.com/img-2023-05/20230729203246.png)
-
+![image.png](https://img-20221128.oss-cn-shanghai.aliyuncs.com/img-2023-05/20230729203246.png)
 ---
-
 - `mkfs.ext4` 格式化分区
 
 ```sh
@@ -140,9 +132,7 @@ sr0                            11:0    1 1024M  0 rom
 - `-a` 归档模式，保持文件属性
 - `-X` 保持文件系统的特殊属性，比如链接之类的
 - `-S` 优化文件传输，跳过已经存在的文件
-
 ---
-
 - 这一步相当于将 `/home_move` 内容写入挂载点对应的逻辑卷当中
 - 实现了类似拷贝的功能
 
@@ -151,7 +141,7 @@ sr0                            11:0    1 1024M  0 rom
 - 卸载
 
 ```sh
-umount /dev/volume-group-1/for_home
+umount /dev/volume-group-1/for_home 
 ```
 
 - 挂载
@@ -178,7 +168,6 @@ root@debian-24-20:/ blkid
 ```
 
 ---
-
 - 查看之前的 fstab
 
 ```sh
@@ -196,7 +185,6 @@ root@debian-24-20:/#
 ```
 
 ---
-
 - 修改之后的 fstab
 
 ```sh
@@ -213,7 +201,6 @@ UUID=5c17f53c-3b71-4006-bc95-ae3955672248 /home           ext4    nodev,nosuid  
 ```
 
 ---
-
 - 将 `/home` 对应的硬件先卸载掉，后面重新挂载，用来查看 `fstab` 是否成功加载
 - 卸载
 
