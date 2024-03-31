@@ -1,7 +1,7 @@
 ---
 author: Albert
 category: CS-算法
-date: 2024-02-22
+date: 2024-03-30
 date created: 2023-12-25
 date updated: 20232-1-22 1911-190287 23:10
 description: 经典排序问题
@@ -33,7 +33,7 @@ url: https://www.yuque.com/albert-tdjyy/glgpzz/hsab5n
 
 ## 代码1
 
-```c
+```cpp
 #include <iostream>
 
 const int N = 1e5 + 5;
@@ -102,7 +102,7 @@ int main() {
 
 ## 代码2
 
-```c
+```cpp
 #include <iostream>
 #include <algorithm>
 
@@ -152,4 +152,73 @@ int main() {
 
     return 0;
 }
+```
+
+---
+
+> [!note]
+> - 此外，还有三向切分的快排，可以规避有点大量重复数字的情况
+
+```go
+package main
+
+import (
+	"fmt"
+	"math/rand"
+	"os"
+)
+
+// 三向切分的快速排序
+func quickSort3Way(arr []int, left int, right int) {
+	if right <= left {
+		return
+	}
+
+	pivotIndex := left + rand.Intn(right-left+1)
+	pivot := arr[pivotIndex]
+
+	lt, gt := left, right
+	i := left
+
+	for i <= gt {
+		if arr[i] < pivot {
+			arr[i], arr[lt] = arr[lt], arr[i]
+			lt++
+			i++
+		} else if arr[i] > pivot {
+			arr[i], arr[gt] = arr[gt], arr[i]
+			gt--
+		} else {
+			i++
+		}
+	}
+
+	// 递归排序小于部分
+	quickSort3Way(arr, left, lt-1)
+	// 递归排序大于部分
+	quickSort3Way(arr, gt+1, right)
+}
+
+func main() {
+	in := os.Stdin
+
+	var n int
+	fmt.Fscan(in, &n)
+
+	var arr = make([]int, n)
+	for i := 0; i < n; i++ {
+		fmt.Fscan(in, &arr[i])
+	}
+
+	quickSort3Way(arr, 0, n-1)
+
+	for i, num := range arr {
+		if i == 0 {
+			fmt.Printf("%d", num)
+		} else {
+			fmt.Printf(" %d", num)
+		}
+	}
+}
+
 ```
