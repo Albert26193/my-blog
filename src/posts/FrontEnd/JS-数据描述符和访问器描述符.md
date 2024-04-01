@@ -3,7 +3,6 @@ author: Albert
 date: 2024-02-22
 date created: 2023-06-16
 date updated: 2023-07-26 14:35
-description: info
 tags:
   - Blog
   - interview

@@ -3,7 +3,6 @@ author: Albert
 date: 2024-02-22
 date created: 2023-05-09
 date updated: 2023-10-10 14:52
-description: info
 tags:
   - Blog
   - JS

@@ -1,0 +1,87 @@
+---
+author: Albert
+date: 2024-04-02
+date created: 2023-12-28
+date updated: 2023-12-28 13:50
+tags:
+  - Blog
+  - algorithm
+  - acw
+  - 完全背包
+  - 动态规划
+title: Other.完全背包求方案数(ACW1023.买书)
+---
+
+# Other.完全背包求方案数(ACW1023.买书)
+
+## 1. 题目
+
+- [活动 - AcWing](https://www.acwing.com/problem/content/description/1025/)
+
+小明手里有n元钱全部用来买书，书的价格为10元，20元，50元，100元。
+问小明有多少种买书方案？（每种书可购买多本）
+
+#### 输入格式
+
+一个整数 n，代表总共钱数。
+
+#### 输出格式
+
+一个整数，代表选择方案种数。
+
+#### 数据范围
+
+$0 \le n \le 1000$
+
+#### 输入样例1
+
+```
+20
+```
+
+#### 输出样例1
+
+```
+2
+```
+
+## 2. 思路
+
+- 此题是非常经典的模板题
+- 即 **完全背包问题求具体方案数**
+- 假定 `f[i]` 为背包容量为  `f[i]`，*且恰好放满* 的情况，那么 `f[i] = f[i - curVol] + f[i]`
+
+## 3. 代码
+
+```go
+package main
+
+import (
+	"bufio"
+	"fmt"
+	"os"
+)
+
+func main() {
+	
+	in := bufio.NewReader(os.Stdin)
+
+	var n int
+	fmt.Fscan(in, &n)
+
+	// fmt.Println(n)
+	books := []int{10, 20, 50, 100}
+
+	// f[i] ==> max Volume is n, methods count
+	f := make([]int, n+1)
+	f[0] = 1
+	for i := 0; i < 4; i++ {
+		currentBook := books[i]
+		for k := currentBook; k <= n; k++ {
+			f[k] += f[k-currentBook]
+		}
+	}
+
+	fmt.Println(f[n])
+}
+```

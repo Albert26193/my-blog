@@ -2,7 +2,6 @@
 author: Albert
 date: 2024-02-22
 date created: 2023-05-09
-description: info
 tags:
   - Blog
   - Git
