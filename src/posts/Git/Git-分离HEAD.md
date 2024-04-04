@@ -37,7 +37,7 @@ git chekcout main
 
 ## 2. 修复分离的HEAD
 
-> cite: https://stackoverflow.com/questions/10228760/how-do-i-fix-a-git-detached-head
+> note: https://stackoverflow.com/questions/10228760/how-do-i-fix-a-git-detached-head
 
 ### 2.1 情况1： 分离的HEAD在分支的旧commit上面
 

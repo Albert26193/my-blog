@@ -7,7 +7,7 @@ description: 运维过程当中的一些实践，作为备忘录使用。
 tags:
   - Blog
   - Linux
-  - 运维备忘录
+  - 备忘录
 title: ACME备忘录
 ---
 

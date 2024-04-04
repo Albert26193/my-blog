@@ -14,7 +14,7 @@ title: Git-reset当中的soft和hard
 
 # Git-reset当中的soft和hard
 
-> cite: https://stackoverflow.com/questions/3528245/whats-the-difference-between-git-reset-mixed-soft-and-hard
+> note: https://stackoverflow.com/questions/3528245/whats-the-difference-between-git-reset-mixed-soft-and-hard
 
 ## 1. `git`的三棵树
 

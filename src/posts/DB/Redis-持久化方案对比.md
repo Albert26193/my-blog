@@ -11,7 +11,9 @@ title: Redis-持久化方案对比
 
 # Redis-持久化方案对比
 
-> [!cite] >[AOF 持久化是怎么实现的？ | 小林coding](https://xiaolincoding.com/redis/storage/aof.html#%E4%B8%89%E7%A7%8D%E5%86%99%E5%9B%9E%E7%AD%96%E7%95%A5)
+> [!note]
+>
+> - [AOF 持久化是怎么实现的？ | 小林coding](https://xiaolincoding.com/redis/storage/aof.html#%E4%B8%89%E7%A7%8D%E5%86%99%E5%9B%9E%E7%AD%96%E7%95%A5)
 
 ## 1. `AOF` 方案（主流）
 

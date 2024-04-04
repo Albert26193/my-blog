@@ -11,8 +11,6 @@ tags:
 title: 计算机网络-MSL的设计
 ---
 
-#network #interview
-
 # 计算机网络-MSL的设计
 
 ## 1. 什么是 `MSL`

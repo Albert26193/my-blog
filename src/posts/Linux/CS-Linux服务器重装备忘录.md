@@ -9,7 +9,7 @@ notionID: 6b432a1b-3569-4043-a3ff-b56ce5fd9916
 tags:
   - Blog
   - Linux
-  - 运维备忘录
+  - 备忘录
 title: CS-Linux服务器重装备忘录
 ---
 

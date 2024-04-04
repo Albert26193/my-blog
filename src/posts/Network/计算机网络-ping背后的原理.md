@@ -16,7 +16,9 @@ title: 计算机网络-ping背后的原理
 
 - ping工作在网络层上，直接调用传输层的ICMP协议。
 
-> [!citation] > [深入理解ICMP协议 - 知乎](https://zhuanlan.zhihu.com/p/369623317)
+> [!note]
+>
+> - [深入理解ICMP协议 - 知乎](https://zhuanlan.zhihu.com/p/369623317)
 
 ## 1. `ICMP` 协议的内容
 

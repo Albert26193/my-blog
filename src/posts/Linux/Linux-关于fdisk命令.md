@@ -15,7 +15,9 @@ title: Linux-关于 fdisk 命令
 
 ## 1. fdisk 命令是什么
 
-> [!citation] > https://wangchujiang.com/linux-command/c/fdisk.html
+> [!note]
+>
+> - https://wangchujiang.com/linux-command/c/fdisk.html
 
 - 用来完成磁盘分区的管理工作
 - 比如创建、删除、修改分区的大小和对应的文件系统
