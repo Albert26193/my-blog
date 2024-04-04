@@ -1,6 +1,6 @@
 ---
 author: Albert
-date: 2024-04-04
+date: 2024-04-05
 date created: 2024-04-02
 tags:
   - Blog
@@ -9,6 +9,7 @@ tags:
   - acw
   - 模板题
   - algorithm
+  - 分组背包
 title: ACW9.分组背包问题
 ---
 
