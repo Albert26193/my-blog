@@ -4,11 +4,11 @@ date: 2024-04-05
 date created: 2024-04-02
 tags:
   - 背包问题
-  - acw
+  - ACW
   - Blog
   - 动态规划
   - 完全背包
-  - algorithm
+  - Algorithm
 title: ACW5.多重背包问题 II
 ---
 
@@ -141,7 +141,7 @@ for k := 1;  k <= s; k *= 2 {
     }
     s -= k
 }
-    
+
 // 处理余下的部分
 if s > 0 {
     curVolume, curWorth := s * v, s * w

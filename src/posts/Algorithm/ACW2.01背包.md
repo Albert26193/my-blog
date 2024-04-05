@@ -5,8 +5,8 @@ date created: 2023-11-28
 date updated: 2023-11-28 21:08
 tags:
   - Blog
-  - acw
-  - algorithm
+  - ACW
+  - Algorithm
   - 背包问题
   - 01背包
 title: ACW2.01背包

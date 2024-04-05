@@ -6,7 +6,7 @@ date updated: 2023-07-23 18:39
 tags:
   - Blog
   - JS
-  - front-end
+  - Frontend
 title: JS-ES6-yield
 ---
 

@@ -8,7 +8,7 @@ description: 经典排序问题
 tags:
   - Blog
   - 排序
-  - algorithm
+  - Algorithm
   - 模板题
 title: Other.归并排序
 url: https://www.yuque.com/albert-tdjyy/glgpzz/oe00t4

@@ -6,8 +6,8 @@ date updated: 2024-01-10 16:05
 description: 计算机网络常识
 tags:
   - Blog
-  - network
-  - interview
+  - Network
+  - Interview
 title: 计算机网络-HTTP缓存相关的请求头
 ---
 

@@ -8,8 +8,8 @@ link: https://www.notion.so/TCP-8e3dc5fa358d400a90b965c6b41dea49
 notionID: 8e3dc5fa-358d-400a-90b9-65c6b41dea49
 tags:
   - Blog
-  - interview
-  - network
+  - Interview
+  - Network
 title: 计算机网络-TCP连接的三次握手
 ---
 

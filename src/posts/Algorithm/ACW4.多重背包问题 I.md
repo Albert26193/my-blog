@@ -4,8 +4,8 @@ date: 2024-04-02
 date created: 2023-12-28
 date updated: 2023-12-28 13:27
 tags:
-  - acw
-  - leetcode
+  - ACW
+  - Leetcode
   - 背包问题
   - 模板题
   - Blog
@@ -18,7 +18,7 @@ title: ACW4.多重背包问题 I
 
 - 有 $N$ 种物品和一个容量是 $V$ 的背包。
 - 第 $i$ 种物品最多有 $s_i$ 件，每件体积是 $v_i$，价值是 $w_i$。
-- 求解将哪些物品装入背包，可使物品体积总和不超过背包容量，且价值总和最大。  
+- 求解将哪些物品装入背包，可使物品体积总和不超过背包容量，且价值总和最大。
 - 输出最大价值。
 
 #### 输入格式
@@ -54,7 +54,7 @@ $0 \lt v_i, w_i, s_i \le 100$
 ## 2. 思路
 
 - 此题为多重背包模板题
-- *多重背包* 可以简单退化成 *普通的 `01`背包问题*
+- _多重背包_ 可以简单退化成 _普通的 `01`背包问题_
 - 比如有 `m` 件相同物品 `x`，那么可以逐个去枚举 `x`，将其当成 `m` 个不同的物品，进行 `01` 背包的处理即可。
 
 ## 3. 代码
@@ -72,7 +72,7 @@ import (
 // f[i][j] ==> from [0, ... , i-1], volume is j, max value is f[i][j]
 func main() {
 	in := bufio.NewReader(os.Stdin)
-	
+
 	var N, V int
 	fmt.Fscan(in, &N, &V)
 
@@ -87,7 +87,7 @@ func main() {
 	}
 
 	f := make([]int, V+1)
-    
+
     for i := 0; i < N; i++ {
 		for j := 0; j < s[i]; j++ {
 			currentVolume := v[i]

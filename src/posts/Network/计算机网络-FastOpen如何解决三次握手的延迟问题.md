@@ -6,8 +6,8 @@ date updated: 2023-12-01 13:27
 description: 计算机网络常识
 tags:
   - Blog
-  - interview
-  - network
+  - Interview
+  - Network
 title: 计算机网络-FastOpen如何解决三次握手的延迟问题
 ---
 

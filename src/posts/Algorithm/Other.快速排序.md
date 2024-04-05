@@ -7,7 +7,7 @@ date updated: 20232-1-22 1911-190287 23:10
 description: 经典排序问题
 tags:
   - Blog
-  - algorithm
+  - Algorithm
   - 排序
   - 模板题
 title: Other.快速排序

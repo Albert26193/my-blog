@@ -7,8 +7,8 @@ date updated: 2024-02-10 10:06
 description: 计算机网络常识
 tags:
   - Blog
-  - network
-  - interview
+  - Network
+  - Interview
 title: 计算机网络-详解HTTPS
 ---
 

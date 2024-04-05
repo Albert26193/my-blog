@@ -7,7 +7,6 @@ description: Linux常用命令
 tags:
   - Blog
   - Linux
-  - Command
 title: Linux-关于 fdisk 命令
 ---
 

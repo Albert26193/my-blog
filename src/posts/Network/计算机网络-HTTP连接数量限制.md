@@ -6,8 +6,8 @@ date updated: 2023-10-23 14:32
 description: 计算机网络常识
 tags:
   - Blog
-  - network
-  - interview
+  - Network
+  - Interview
 title: 计算机网络-HTTP连接数量限制
 ---
 

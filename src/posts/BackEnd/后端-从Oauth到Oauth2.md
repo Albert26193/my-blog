@@ -6,8 +6,8 @@ date updated: 2023-12-25 16:09
 tags:
   - Blog
   - 安全
-  - back-end
-  - interview
+  - Backend
+  - Interview
 title: 后端-从Oauth到Oauth2
 ---
 

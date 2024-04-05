@@ -6,7 +6,7 @@ date updated: 2023-09-19 15:25
 tags:
   - Blog
   - JS
-  - front-end
+  - Frontend
 title: JS-ES6-Symbol
 ---
 

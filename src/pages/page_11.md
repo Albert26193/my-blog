@@ -9,4 +9,4 @@ import { useData } from "vitepress";
 const { theme } = useData();
 const posts = theme.value.posts.slice(100,110)
 </script>
-<Page :posts="posts" :pageCurrent="11" :pagesNum="11" />
+<Page :posts="posts" :pageCurrent="11" :pagesNum="12" />

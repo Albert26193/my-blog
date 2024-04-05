@@ -7,8 +7,8 @@ date updated: 2024-02-07 00:11
 description: 计算机网络常识
 tags:
   - Blog
-  - network
-  - interview
+  - Network
+  - Interview
 title: 计算机网络-ping背后的原理
 ---
 

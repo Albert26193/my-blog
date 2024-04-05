@@ -6,8 +6,8 @@ date updated: 2024-01-04 15:39
 description: 计算机网络常识
 tags:
   - Blog
-  - interview
-  - network
+  - Interview
+  - Network
 title: 计算机网络-为什么需要随机ISN
 ---
 

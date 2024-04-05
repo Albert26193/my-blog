@@ -4,9 +4,9 @@ date: 2024-03-31
 date created: 2024-03-31
 tags:
   - Blog
-  - bash编程
+  - Bash编程
   - Linux
-  - gist
+  - Gist
   - 折腾
 title: Linux-批量建立硬链接上传博客
 ---

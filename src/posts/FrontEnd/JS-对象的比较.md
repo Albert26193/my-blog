@@ -7,8 +7,8 @@ description: JS基础知识
 tags:
   - Blog
   - JS
-  - front-end
-  - interview
+  - Frontend
+  - Interview
 title: JS-对象的比较
 ---
 

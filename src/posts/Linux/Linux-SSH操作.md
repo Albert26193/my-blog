@@ -8,7 +8,6 @@ description: Linux常用命令
 tags:
   - Blog
   - Linux
-  - Command
 title: Linux-SSH操作
 ---
 

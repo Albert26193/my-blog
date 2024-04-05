@@ -7,8 +7,8 @@ date updated: 2023-12-07 20:37
 tags:
   - Blog
   - Go
-  - back-end
-  - interview
+  - Backend
+  - Interview
 title: Go-关于Slice
 ---
 

@@ -6,7 +6,7 @@ date updated: 2024-02-19 12:44
 tags:
   - Blog
   - DB
-  - interview
+  - Interview
 title: 数据库-BufferPool的原理
 ---
 

@@ -6,8 +6,8 @@ date updated: 2023-07-24 13:47
 tags:
   - Blog
   - JS
-  - interview
-  - front-end
+  - Interview
+  - Frontend
 title: JS-深拷贝和浅拷贝
 ---
 

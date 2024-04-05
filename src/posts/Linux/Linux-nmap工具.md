@@ -5,7 +5,7 @@ date created: 2023-12-07
 date updated: 2023-12-07 14:20
 tags:
   - Blog
-  - network
+  - Network
 title: Linux-nmap工具
 ---
 

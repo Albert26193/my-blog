@@ -5,9 +5,9 @@ date created: 2023-06-16
 date updated: 2023-07-26 14:35
 tags:
   - Blog
-  - interview
+  - Interview
   - JS
-  - front-end
+  - Frontend
 title: JS-数据描述符和访问器描述符
 ---
 

@@ -6,7 +6,7 @@ date updated: 2024-01-19 21:26
 tags:
   - Blog
   - Go
-  - interview
+  - Interview
 title: Go-byte和rune区别
 ---
 

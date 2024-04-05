@@ -6,7 +6,7 @@ date updated: 2023-04-16 18:05
 tags:
   - Blog
   - Linux
-  - bash编程
+  - Bash编程
 title: Linux-bash脚本当中数组的使用
 ---
 

@@ -6,7 +6,7 @@ date updated: 2023-10-10 12:41
 tags:
   - Blog
   - JS
-  - front-end
+  - Frontend
 title: JS-Reflect
 ---
 

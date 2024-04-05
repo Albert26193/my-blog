@@ -7,8 +7,8 @@ description: JS基础知识
 tags:
   - Blog
   - JS
-  - interview
-  - front-end
+  - Interview
+  - Frontend
 title: JS-函数对象的length属性
 ---
 

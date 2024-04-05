@@ -6,7 +6,7 @@ date updated: 2024-01-15 14:49
 tags:
   - Blog
   - Go
-  - interview
+  - Interview
 title: Go-进程、线程、协程的区别
 ---
 

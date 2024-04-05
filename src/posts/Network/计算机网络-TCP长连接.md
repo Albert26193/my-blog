@@ -6,8 +6,8 @@ date updated: 2023-10-23 15:50
 description: 计算机网络常识
 tags:
   - Blog
-  - interview
-  - network
+  - Interview
+  - Network
 title: 计算机网络-TCP长连接
 ---
 

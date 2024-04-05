@@ -7,7 +7,7 @@ description: JS基础知识
 tags:
   - Blog
   - JS
-  - front-end
+  - Frontend
 title: JS-ES6-变量提升和暂时性死区
 ---
 

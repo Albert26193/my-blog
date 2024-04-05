@@ -5,8 +5,8 @@ date created: 2023-05-09
 date updated: 2023-04-23 19:40
 tags:
   - Blog
-  - network
-  - interview
+  - Network
+  - Interview
 title: 计算机网络-TCP的四次挥手
 ---
 

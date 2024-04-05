@@ -6,7 +6,7 @@ date updated: 2023-10-10 14:52
 tags:
   - Blog
   - JS
-  - front-end
+  - Frontend
 title: JS-闭包
 ---
 

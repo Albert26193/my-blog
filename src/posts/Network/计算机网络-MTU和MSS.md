@@ -6,8 +6,8 @@ date updated: 2023-05-16 18:43
 description: 网络层和传输层协议常识
 tags:
   - Blog
-  - network
-  - interview
+  - Network
+  - Interview
 title: 计算机网络-MTU和MSS
 ---
 

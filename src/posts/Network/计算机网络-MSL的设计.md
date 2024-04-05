@@ -6,8 +6,8 @@ date updated: 2023-12-01 16:47
 description: 计算机网络常识
 tags:
   - Blog
-  - network
-  - interview
+  - Network
+  - Interview
 title: 计算机网络-MSL的设计
 ---
 

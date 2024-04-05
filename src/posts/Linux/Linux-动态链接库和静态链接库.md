@@ -7,7 +7,7 @@ description: 操作系统常识
 tags:
   - Blog
   - OS
-  - interview
+  - Interview
 title: Linux-动态链接库和静态链接库
 ---
 

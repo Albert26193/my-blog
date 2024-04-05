@@ -6,7 +6,7 @@ date created: 2023-05-09
 date updated: 2022-12-07 23:10
 tags:
   - Blog
-  - network
+  - Network
 title: 计算机网络-ICMP协议的内容
 url: https://www.yuque.com/albert-tdjyy/bp5vz7/gss5d8
 ---

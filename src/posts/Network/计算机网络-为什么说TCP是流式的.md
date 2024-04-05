@@ -5,8 +5,8 @@ date created: 2023-05-09
 date updated: 2023-04-14 19:09
 tags:
   - Blog
-  - interview
-  - network
+  - Interview
+  - Network
 title: 计算机网络-为什么说TCP是流式的
 ---
 

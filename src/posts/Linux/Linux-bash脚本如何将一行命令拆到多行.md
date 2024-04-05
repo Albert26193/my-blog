@@ -6,7 +6,7 @@ date updated: 2023-02-27 18:12
 tags:
   - Blog
   - Linux
-  - bash编程
+  - Bash编程
 title: Linux-bash脚本如何将一行命令拆到多行
 ---
 

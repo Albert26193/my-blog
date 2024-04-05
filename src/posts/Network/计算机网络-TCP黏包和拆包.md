@@ -7,8 +7,8 @@ date updated: 2023-04-26 17:35
 description: 计算机网络常识
 tags:
   - Blog
-  - network
-  - interview
+  - Network
+  - Interview
 title: 计算机网络-TCP黏包和拆包
 ---
 

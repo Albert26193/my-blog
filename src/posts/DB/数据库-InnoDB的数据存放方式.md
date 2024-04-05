@@ -6,7 +6,7 @@ date updated: 2024-02-19 12:23
 tags:
   - Blog
   - DB
-  - interview
+  - Interview
 title: 数据库-InnoDB的数据存放方式
 ---
 

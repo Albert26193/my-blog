@@ -7,7 +7,7 @@ description: JS基础知识
 tags:
   - Blog
   - JS
-  - interview
+  - Interview
 title: JS-闭包面试题
 ---
 

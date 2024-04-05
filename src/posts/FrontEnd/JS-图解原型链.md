@@ -7,7 +7,7 @@ description: JS基础知识
 tags:
   - Blog
   - JS
-  - front-end
+  - Frontend
 title: JS-图解原型链
 ---
 

@@ -6,8 +6,8 @@ date updated: 2023-10-18 16:19
 description: 计算机网络常识
 tags:
   - Blog
-  - interview
-  - network
+  - Interview
+  - Network
 title: 计算机网络-为什么我们需要RPC
 ---
 

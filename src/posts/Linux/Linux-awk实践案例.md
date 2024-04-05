@@ -7,7 +7,7 @@ description: Linux常用命令
 tags:
   - Blog
   - Linux
-  - Command
+  - Linux
 title: Linux-awk实践案例
 ---
 
