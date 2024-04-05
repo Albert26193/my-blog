@@ -2,13 +2,13 @@
   <div class="tags">
     <span
       @click="toggleTag(String(key))"
-      v-for="(_, key, index) in data"
+      v-for="(_, key, index) in sortTags(tagsList)"
       :key="`tag-${index}`"
       class="tag hover:.dark:bg-blue-500 hover:bg-blue-200 rounded-full"
       :class="{ active: selectTag == String(key) }"
     >
       {{ key }}
-      <span class="count">{{ data[key].length }}</span>
+      <span class="count">{{ tagsList[key].length }}</span>
     </span>
   </div>
   <div
@@ -23,7 +23,7 @@
   </div>
   <a
     :href="withBase(article.regularPath)"
-    v-for="(article, index) in data[selectTag]"
+    v-for="(article, index) in tagsList[selectTag]"
     :key="index"
     class="posts"
   >
@@ -47,7 +47,20 @@ if (typeof window != 'undefined') {
 }
 const params = new URLSearchParams(url)
 const { theme } = useData()
-const data = computed(() => initTags(theme.value.posts))
+
+const tagsList = computed(() => initTags(theme.value.posts))
+
+// sort tag according to dict order
+const sortTags = (tags: Record<string, string[]>) => {
+  const sortedTags = Object.keys(tags).sort((a, b) => {
+    return a.localeCompare(b)
+  })
+  const sortedTagsList = {}
+  sortedTags.forEach((tag) => {
+    sortedTagsList[tag] = tags[tag]
+  })
+  return sortedTagsList
+}
 
 const selectTag = ref(params.get('tag') ? params.get('tag') : '')
 const toggleTag = (tag: string) => {
