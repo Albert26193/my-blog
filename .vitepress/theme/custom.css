@@ -20,6 +20,7 @@
 }
 
 .dark {
+  --vp-c-bg: #0e0f0f;
   --vp-c-brand: #7aacfd !important;
   --tag-info-color: rgba(59, 130, 246, 0.3);
   --tag-count-color: rgba(125, 249, 256, 0.9);
