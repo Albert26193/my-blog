@@ -2,7 +2,6 @@
 author: Albert
 date: 2024-02-22
 date created: 2023-07-19
-date updated: 2023-07-19 22:20
 description: Linux基本常识
 tags:
   - Blog

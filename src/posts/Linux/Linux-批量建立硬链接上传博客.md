@@ -1,7 +1,6 @@
 ---
 author: Albert
 date: 2024-03-31
-date created: 2024-03-31
 tags:
   - Blog
   - Bash编程

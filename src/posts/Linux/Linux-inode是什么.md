@@ -2,7 +2,6 @@
 author: Albert
 date: 2024-02-22
 date created: 2023-05-09
-date updated: 2023-02-07 14:16
 description: Linux基本常识
 link: https://www.notion.so/Linux-inode-fe5ea5d9e0f347aab744d13755c95279
 notionID: fe5ea5d9-e0f3-47aa-b744-d13755c95279

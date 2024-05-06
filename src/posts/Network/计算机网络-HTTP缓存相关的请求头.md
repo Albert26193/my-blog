@@ -2,7 +2,6 @@
 author: Albert
 date: 2024-02-22
 date created: 2024-01-10
-date updated: 2024-01-10 16:05
 description: 计算机网络常识
 tags:
   - Blog

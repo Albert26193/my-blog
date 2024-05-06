@@ -2,7 +2,6 @@
 author: Albert
 date: 2024-02-22
 date created: 2023-12-01
-date updated: 2023-12-01 15:02
 tags:
   - Blog
   - Network

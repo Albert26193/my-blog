@@ -2,7 +2,6 @@
 author: Albert
 date: 2024-02-22
 date created: 2023-05-09
-date updated: 2023-02-09 18:42
 description: Git使用常识
 tags:
   - Blog

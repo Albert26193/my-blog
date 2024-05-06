@@ -2,7 +2,6 @@
 author: Albert
 date: 2024-02-22
 date created: 2023-05-098 14:17
-date updated: 2023-02-13 13:19
 description: Git使用常识
 link: https://www.notion.so/Git-reset-soft-hard-mixed-243ea4b321fa42fb8fcde887becee21c
 notionID: 243ea4b3-21fa-42fb-8fcd-e887becee21c

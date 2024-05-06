@@ -2,7 +2,6 @@
 author: Albert
 date: 2024-02-22
 date created: 2023-05-09
-date updated: 2023-06-20 18:25
 description: Linux基本常识
 link: https://www.notion.so/Linux-Crontab-bbea06203a1e4d1988f27dda554d095c
 notionID: bbea0620-3a1e-4d19-88f2-7dda554d095c

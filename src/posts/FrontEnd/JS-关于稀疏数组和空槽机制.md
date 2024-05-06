@@ -2,7 +2,6 @@
 author: Albert
 date: 2024-02-22
 date created: 2023-07-10
-date updated: 2023-07-10 16:00
 description: JS基础知识
 tags:
   - Blog

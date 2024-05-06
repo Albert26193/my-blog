@@ -2,7 +2,6 @@
 author: Albert
 date: 2024-03-03
 date created: 2023-05-09
-date updated: 2023-04-16 18:05
 tags:
   - Blog
   - Linux

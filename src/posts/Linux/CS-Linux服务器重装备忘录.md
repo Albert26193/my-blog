@@ -2,7 +2,6 @@
 author: Albert
 date: 2024-02-22
 date created: 2023-12-25
-date updated: 2023-0982-049 106:42
 description: 运维过程当中的一些实践，作为备忘录使用。
 link: https://www.notion.so/CS-Linux-6b432a1b3
 notionID: 6b432a1b-3569-4043-a3ff-b56ce5fd9916

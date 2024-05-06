@@ -2,7 +2,6 @@
 author: Albert
 date: 2024-02-22
 date created: 2023-12-25
-date updated: 2023-07-23 18:39
 tags:
   - Blog
   - JS

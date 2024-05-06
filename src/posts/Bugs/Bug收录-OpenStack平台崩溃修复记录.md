@@ -1,7 +1,6 @@
 ---
 author: Albert
-date: 2024-04-06
-date created: 2024-03-08
+date: 2024-03-08
 tags:
   - Blog
   - Bug收录
@@ -15,7 +14,7 @@ title: Bug收录-OpenStack平台崩溃修复记录
 
 - `2024/03/08` 凌晨的时候，学院机房断电，虽然 `OpenStack` 平台的底层服务按照手册的内容进行了关闭，但是重启之后还是无法运行。
 - 该平台在 `2019` 年搭建，硬件已经非常老旧了。
-- *硬件情况*：`5` 台同构的 `CentOS 7`，`IP` 地址为 `10.176.25.7/8/9/10/11`。
+- _硬件情况_：`5` 台同构的 `CentOS 7`，`IP` 地址为 `10.176.25.7/8/9/10/11`。
 - 拿到了前任运维的手册，大概清楚了底层是基于 `docker` 来提供服务的。
 
 ## 2. 定位 `MongoDB` 问题
@@ -73,7 +72,7 @@ docker inspect 6cb
 
 ```bash
  docker info | grep -in "root"
- 
+
 # 39: Docker Root Dir: /var/lib/docker
 
 find /var/lib/docker -name mongodb
@@ -134,11 +133,12 @@ rm: remove regular file ‘mongod.lock’? y
 ## 4. 修复 `MariaDB` 问题
 
 > [!note]
+>
 > - 这一部分排查起来比较费力，在日志当中，没有明确的错误信息。
-> - 经历的过程：*找到问题和 `MariaDB` 相关*，然后，*搞清楚 `MariaDB` 起到的作用是什么（作用是同步多个节点的状态）*，再然后，*查询官方文档，是否封装了恢复节点状态的命令*，最后，找到命令，并且执行。
+> - 经历的过程：_找到问题和 `MariaDB` 相关_，然后，_搞清楚 `MariaDB` 起到的作用是什么（作用是同步多个节点的状态）_，再然后，_查询官方文档，是否封装了恢复节点状态的命令_，最后，找到命令，并且执行。
 
 - 此外，在多个 `Master` 节点当中，多个 `MariaDB` 容器报错。
-- 检索 `docker logs` 和 `docker inspect`  发现 `MariaDB` 容器本身并无异常。
+- 检索 `docker logs` 和 `docker inspect` 发现 `MariaDB` 容器本身并无异常。
 - **需要弄清楚 `MariaDB` 在 `OpenStack` 当中的作用，而不是直接去操作，这一步需要首先想清楚**，结合 `Google` 和 `ChatGPT` ，基本上清楚其作用是用来*同步多个节点的状态*。
 - 那么，后续的操作，应该是尝试去 `Recovery`，通过查阅官方的文档，查询到了具体的指令，执行即可
 

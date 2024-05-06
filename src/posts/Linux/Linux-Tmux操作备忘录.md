@@ -3,7 +3,7 @@ author: Albert
 category: CS-基础
 date: 2024-02-24
 date created: 2023-05-09
-date updated: 2022-12-11 16:50
+
 link: https://www.notion.so/Linux-Tmux-82488e3eb82f47cd990cdec78c14bac1
 tags:
   - Blog

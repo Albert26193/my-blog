@@ -3,7 +3,6 @@ author: Albert
 category: CS-基础
 date: 2024-02-22
 date created: 2023-05-09
-date updated: 2023-06-08 23:01
 description: Linux基本的目录结构
 tags:
   - Blog

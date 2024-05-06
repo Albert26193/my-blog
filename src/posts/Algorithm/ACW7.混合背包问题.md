@@ -1,7 +1,6 @@
 ---
 author: Albert
-date: 2024-04-05
-date created: 2024-04-04
+date: 2024-04-04
 tags:
   - Blog
   - ACW

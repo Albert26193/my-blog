@@ -2,7 +2,6 @@
 author: Albert
 date: 2024-02-22
 date created: 2023-08-08
-date updated: 2023-08-13 11:53
 description: Linux常用命令
 tags:
   - Blog

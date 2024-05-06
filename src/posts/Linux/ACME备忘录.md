@@ -2,7 +2,6 @@
 author: Albert
 date: 2024-02-22
 date created: 2023-12-25
-date updated: 2023-12-20 20:53
 description: 运维过程当中的一些实践，作为备忘录使用。
 tags:
   - Blog

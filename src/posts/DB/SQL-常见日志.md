@@ -1,7 +1,6 @@
 ---
 author: Albert
 date: 2024-02-24
-date created: 2024-02-24
 tags:
   - Blog
   - DB
