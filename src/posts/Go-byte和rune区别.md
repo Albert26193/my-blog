@@ -2,7 +2,6 @@
 author: Albert
 date: 2024-02-23
 date created: 2024-01-19
-date: 2024-01-19 21:26
 tags:
   - Blog
   - Go

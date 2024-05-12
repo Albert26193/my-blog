@@ -60,6 +60,12 @@ WantedBy=default.target
 
 - 如果在客户端调用，需要调整 `CORS` 配置
 - 需要注意是否识别到显卡驱动
+- 修改完成之后，执行以下命令
+
+```bash
+ sudo systemctl daemon-reload && sudo systemctl restart ollama && sudo
+systemctl status ollama -l
+```
 
 ### 2.3 拉取模型
 
