@@ -1,15 +1,16 @@
 ---
 author: Albert
-date: 2024-02-22
+date: 2024-06-05
 date created: 2023-12-25
+mindmap-plugin: basic
 tags:
   - Blog
   - Linux
   - 备忘录
-title: ACME备忘录
+title: Linux-ACME备忘录
 ---
 
-# ACME备忘录
+# Linux-ACME备忘录
 
 ## 1. 生成密钥
 
@@ -112,5 +113,77 @@ cp ./xxx.cer ./fullchain.key /etc/nginx/ssl
                 try_files $uri $uri/ /index.html;
         }
 }
+
+```
+
+## 3. 从 `acme` 到 `nginx`
+
+- 一个简单的自动化脚本，将 `acme` 当中的内容拷贝到 `nginx` 指定的证书目录当中
+
+```sh
+#!/bin/bash
+
+#acme.sh --set-default-ca --server letsencrypt
+
+if [[ -z $1 ]]; then
+	echo "no argument"
+	exit 1
+fi
+
+declare -r site="$1"
+declare -r acme_path="/home/albert/.acme.sh"
+declare -r domain_name="albert.cool"
+declare -r temp_install_path="${acme_path}/temp_ssl"
+declare -r install_path="/etc/nginx/ssl"
+declare -r full_url="$1.${domain_name}"
+declare -i is_force=0
+
+if [[ -n $2 && $2 == "--force" ]]; then
+	is_force=1
+	echo "Force renw it!"
+fi
+
+function acme_get {
+	if [[ ${is_force} -eq 0 ]]; then
+		bash "${acme_path}/acme.sh" --issue --dns dns_ali -d "${full_url}"
+	else
+		bash "${acme_path}/acme.sh" --issue --dns dns_ali -d "${full_url}" --force
+	fi
+}
+
+function acme_install_cert {
+	bash "${acme_path}/acme.sh" --install-cert -d "${full_url}" \
+		--cert-file "${temp_install_path}/${full_url}.cer" \
+		--key-file "${temp_install_path}/${full_url}.key" \
+		--fullchain-file "${temp_install_path}/${site}.fullchain.cer" &&
+		sudo cp ${temp_install_path}/* "${install_path}"
+}
+
+function acme_show_nginx_block {
+	echo "server {
+            listen 80;
+            listen 443 ssl;
+            listen [::]:443 ssl;
+            server_name ${site}.albert.cool;
+
+            ssl_certificate \"/etc/nginx/ssl/${site}.fullchain.cer\";
+            ssl_certificate_key \"/etc/nginx/ssl/${site}.albert.cool.key\";
+
+            if (\$scheme = http) {
+                return 301 https://\$host\$request_uri;
+            }
+
+            location / {
+                proxy_pass http://127.0.0.1:3002;
+                #proxy_set_header Host \$host;
+                proxy_set_header X-Real-IP \$remote_addr;
+                proxy_set_header X-Forwarded-For \$remote_addr;
+            }
+    }"
+}
+#acme_get &&
+acme_install_cert &&
+	acme_show_nginx_block &&
+	sudo systemctl restart nginx
 
 ```

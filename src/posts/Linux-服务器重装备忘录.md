@@ -1,6 +1,6 @@
 ---
 author: Albert
-date: 2024-02-22
+date: 2024-05-28
 date created: 2023-12-25
 link: https://www.notion.so/CS-Linux-6b432a1b3
 notionID: 6b432a1b-3569-4043-a3ff-b56ce5fd9916
@@ -8,10 +8,10 @@ tags:
   - Blog
   - Linux
   - 备忘录
-title: CS-Linux服务器重装备忘录
+title: Linux-服务器重装备忘录
 ---
 
-# CS-Linux服务器重装备忘录
+# Linux-服务器重装备忘录
 
 ## 1. 前置 Misc 操作
 
@@ -183,13 +183,7 @@ update-alternatives --config editor
 
 - 编辑 `visudo`，禁用特定用户的特定权限
 
----
-
-## 9. 配置 `installer` 用户的 `ssh-key`
-
-- 结合 `onekey_zsh` 脚本
-
-## 10. 设置时钟同步
+## 9. 设置时钟同步
 
 - 硬件时钟矫正 `hwclock`
 - 设置时间 `date` 和 `hwclock` 同步

@@ -46,7 +46,7 @@ User=ollama
 Group=ollama
 Restart=always
 RestartSec=3
-Environment="PATH=/data/other/anaconda3/bin:/data/other/anaconda3/condabin:/usr/local/bin:/usr/bin:/home/wangxinyu/.local:/home/wangxinyu/.local/bin:/home/wangxinyu/.local:/home/wangxinyu/.local/bin"
+Environment="PATH=/data/other/anaconda3/bin:xxxxxx" # change to bin
 Environment="OLLAMA_ORIGINS=*.albert.cool"
 Environment="OLLAMA_HOST=0.0.0.0"
 Environment="NVARCH=x86_64"
@@ -63,16 +63,23 @@ WantedBy=default.target
 - 修改完成之后，执行以下命令
 
 ```bash
- sudo systemctl daemon-reload && sudo systemctl restart ollama && sudo
-systemctl status ollama -l
+sudo systemctl daemon-reload \
+&& sudo systemctl restart ollama \
+&& sudo systemctl status ollama -l
 ```
 
 ### 2.3 拉取模型
 
 - 按照如下方式可以一键拉取运行
 
-```
+```bash
 ollama run llama3:70b
+```
+
+### 2.4 查看日志
+
+```bash
+journalctl -e -u ollama
 ```
 
 ## 3. 硬件要求
